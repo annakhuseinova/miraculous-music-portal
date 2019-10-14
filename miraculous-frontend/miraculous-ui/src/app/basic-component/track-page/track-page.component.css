@@ -1,0 +1,439 @@
+.track-page-container{
+
+  min-height: 820px;
+  background-image: url("../../../assets/images/track-page-background-picture.jpg");
+  background-repeat: no-repeat;
+  background-position-y: inherit;
+  width: 100%;
+}
+
+.audiotrack {
+
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.track-price {
+
+  font-size: 26px;
+  font-family: JosephinSansBold;
+  color: #fff;
+  padding-bottom: 10px;
+  margin: 0;
+  position: absolute;
+  top: 78%;
+  left: 13%;
+}
+
+.track-duration {
+
+  position: absolute;
+  top: 15px;
+  right: 220px;
+  font-size: 13px;
+}
+
+.track-current-time {
+
+  position: absolute;
+  left: 50px;
+  font-size: 13px;
+  top: 15px;
+
+}
+
+.track-progress-bar {
+
+  cursor: pointer;
+  width: 57%;
+  height: 2px;
+  background-color: white;
+  display: flex;
+  position: relative;
+  margin: 0 15px 0 15px;
+
+}
+.add-to-cart-button {
+
+  position: absolute;
+  right: 20px;
+  left: 4%;
+  top: 78%;
+  cursor: pointer;
+  width: 100px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: #3bc8e7;
+  border: none;
+  color: #ffffff;
+  font-family: "JosephinSansRegular";
+  font-size: 15px;
+  font-weight: 400;
+  outline: none;
+
+}
+
+.add-to-cart-button:hover {
+
+  color: #ffffff;
+  box-shadow: 0px 0px 20px 0px #3bc8e7;
+}
+
+.track-info {
+
+  padding-top: 40px;
+  margin-left: 70px;
+  display: flex;
+  color: #fff;
+  position: relative;
+}
+
+.track-cover {
+
+  width: 240px;
+  height: 240px;
+  border-radius: 5px;
+  background-size: cover;
+  background-position: center;
+}
+
+.track-info-contents {
+
+  margin-left: 30px;
+  width: 500px;
+  position: relative;
+}
+
+.fa-heart {
+
+  top: 55px;
+  position: absolute;
+  font-size: 23px;
+  right: 75px;
+}
+
+.fa-heart:hover, .track-author:hover {
+
+  color: #3bc8e7;
+  cursor: pointer;
+}
+
+.track-title {
+
+  font-size: 22px;
+  font-family: JosephinSansBold;
+  color: #fff;
+  padding-bottom: 10px;
+  margin: 0;
+}
+
+.number-of-track-likes {
+
+  font-family: JosephinSansRegular;
+  position: absolute;
+  top: 33px;
+  right: 50px;
+  font-size: 21px;
+}
+
+.track-author, .track-language, .track-length, .track-release-date, .track-genres, .track-album {
+
+  color: #fff;
+  font-size: 15px;
+  margin-bottom: 5px;
+  font-family: JosephinSansSemiBold;
+}
+
+.track-author {
+
+  text-decoration: none;
+}
+
+.track-description {
+
+  overflow-y: scroll;
+  height: 86px;
+  width: 100%;
+  font-family: JosephinSansRegular;
+}
+
+
+.track-description::-webkit-scrollbar {
+  width: 6px;
+  background-color: #F5F5F5;
+}
+
+.track-description::-webkit-scrollbar-thumb {
+  background-color: #252b4d;
+}
+
+.track-description::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #1b2039;
+}
+
+.review_stars_wrap{
+  overflow: hidden;
+  position: absolute;
+  left: 70%;
+}
+
+#review_stars {
+  overflow: hidden;
+  position: relative;
+  float: left;
+}
+
+#review_stars input {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  z-index: 0;
+}
+
+#review_stars input ~ label i{
+  color:#ccc;
+}
+
+#review_stars input:checked ~ label i{
+  color: #ec9801;
+}
+
+#review_stars label {
+  float: right;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+#review_stars label:hover i, #review_stars label:hover ~ label i{
+  color: #ec9801;
+}
+
+.similar-tracks-block {
+
+  width: 1280px;
+}
+
+.album-page-comments-section {
+
+  display: flex;
+  margin-left: 40px;
+}
+.album-page-comments-signature {
+
+  color: #3bc8e7;
+  font-family: "JosephinSansSemiBold";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 50px;
+  position: relative;
+  margin-top: 20px;
+
+}
+
+.album-page-comments-signature:after {
+
+  content: " ";
+  position: absolute;
+  background-image: url(../../../assets/images/blue-divider.png);
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 2px;
+  bottom: 0;
+  left: -15px;
+}
+
+.album-page-comments-part {
+
+  width: 400px;
+}
+
+.album-page-comments-form-text-input {
+
+  width: 290px;
+  height: 300px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #777777;
+  font-family: "JosephinSansRegular";
+  font-size: 15px;
+  outline: none;
+  font-weight: 400;
+  padding-top: 15px;
+  padding-left: 19px;
+  padding-right: 19px;
+
+}
+
+.album-page-comments-form-submit-button {
+
+  width: 200px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #3bc8e7;
+  outline: none;
+  border: none;
+  color: #ffffff;
+  font-family: "JosephinSansRegular";
+  font-size: 15px;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.album-page-comments-form-submit-button:hover {
+
+  box-shadow: 0px 0px 20px 0px #3bc8e7;
+}
+
+.sign-in-suggestion {
+
+  display: none;
+  text-align: center;
+  font-family: JosephinSansRegular;
+  margin-top: 50px;
+}
+
+.sign-in-suggestion p {
+
+  color: white;
+}
+
+.sign-in-suggestion button {
+
+  background-color: #3bc8e7;
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 135px;
+  height: 34px;
+}
+
+.sign-in-suggestion button:hover {
+
+  color: #ffffff;
+  box-shadow: 0px 0px 20px 0px #3bc8e7;
+}
+
+.play-album-track-button {
+
+  width: 45px;
+  height: 40px;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  background-color: #1b2039;
+  color: white;
+
+}
+
+.track-handle {
+
+  border-radius: 50%;
+  height: 13px;
+  width: 13px;
+  background-color: #3bc8e7;
+  position: absolute;
+  content: " ";
+  top: 0;
+  left: 0;
+  margin: 0;
+  cursor: pointer;
+  top: -6px;
+  left: -4px;
+  box-shadow: 0px 0px 15px rgb(255, 255, 255);
+}
+
+.progress-fill {
+
+  background-color:#3bc8e7;
+  height: 2px;
+  margin: 0;
+}
+
+.track-comments {
+
+  overflow-y: scroll;
+  height: 320px;
+  margin-right: 25px;
+}
+
+.track-comments::-webkit-scrollbar {
+  width: 6px;
+  background-color: #F5F5F5;
+}
+
+.track-comments::-webkit-scrollbar-thumb {
+  background-color: #252b4d;
+}
+
+.track-comments::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #1b2039;
+}
+
+.download-track-button a {
+
+  color: white;
+  text-decoration: none;
+}
+
+.no-track-comments-yet {
+
+  color: white;
+  font-family: JosephinSansRegular;
+}
+
+.download-track-button, .add-to-queue-button {
+
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  width: 130px;
+  height: 33px;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+}
+
+.free-track-text {
+
+  color: white;
+  font-family: JosephinSansRegular;
+  position: absolute;
+  font-size: 19px;
+  top: 74%;
+  left: 5%;
+}
+
+.download-track-button:hover, .add-to-queue-button:hover {
+
+  color: white;
+  box-shadow: 0px 0px 20px 0px white;
+}
+
+.add-to-queue-button {
+
+  margin-left: 10px;
+}
+
+.track-liked-by-current-visitor {
+
+  color: #3bc8e7;
+}
+
+.fa-check {
+
+  color: forestgreen;
+  top: 79%;
+  font-size: 20px;
+  position: absolute;
+  left: 11%;
+}

@@ -1,0 +1,25 @@
+<div class="login-form-block">
+  <div class="login-form-headphones-pic"></div>
+  <div class="login-form-contents">
+    <h5 class="login-signature">Login / Sign in</h5>
+    <p class="login-message"></p>
+    <div class="login-form">
+      <p #loginInvalidMessage class="login-invalid-message">
+        <span *ngIf="!isValidationFailed">{{authorizationErrorMessage}}</span>
+        <span *ngIf="isValidationFailed">{{visitorAuthError?.login}}</span>
+      </p>
+      <input type="text" name="login-name-input" placeholder="Enter Your Login" class="login-name-input"  [(ngModel)]="visitor.login" #login="ngModel" required pattern="\w+">
+      <p class="password-invalid-message" *ngIf="isValidationFailed">{{visitorAuthError?.password}}</p>
+      <input type="password" name="login-email-input" placeholder="Enter Password" class="login-email-input" [(ngModel)]="visitor.password"  required #password="ngModel" pattern="\w+">
+      <div class="login-remember-me-checkbox-block">
+        <input #rememberMeModeCheckbox type="checkbox" name="login-remember-me-checkbox"class="login-remember-me-checkbox" id="login-remember-me-checkbox" (click)="setRememberMeAuthMode()">
+        <label for="login-remember-me-checkbox" class="login-remember-me-checkbox-label">Keep Me Signed In</label>
+      </div>
+      <input type="submit" name="login-submit-button" class="login-submit-button" value="LOGIN" (click)="submitLoginForm()" >
+      <input type="reset" class="reset-authorization-form-button" hidden>
+    </div>
+    <p class="register-link">Don't have an account? <button (click)="switchToRegistrationComponent()">Register Here</button></p>
+  </div>
+  <a class="close-button" (click)="closeLoginComponent()"><img src="assets/icons/close-button.png"></a>
+</div>
+

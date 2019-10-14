@@ -1,0 +1,56 @@
+.found-artist-block {
+
+  height: 100px;
+  width: 445px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-family: JosephinSansRegular;
+  margin-left: 50px;
+  margin-top: 30px;
+}
+
+.found-artist-cover {
+
+  margin-left: 10px;
+  width: 80px;
+  height: 90px;
+  margin-right: 30px;
+  background-color: lightgrey;
+  border-radius: 10px;
+  background-size: cover;
+}
+
+.found-artist-info-item {
+
+  margin: 5px;
+  display: block;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 135px;
+}
+
+.login {
+
+  font-size: 16px;
+  text-decoration: none;
+  color: white;
+}
+
+.login:hover {
+
+  color: #3bc8e7;
+}
+
+.number-of-tracks {
+
+  display: flex;
+}
+
+.number-of-albums {
+
+  margin-left: 15px;
+  display: flex;
+}

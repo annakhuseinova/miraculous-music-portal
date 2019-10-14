@@ -1,0 +1,28 @@
+.featured-artist-name {
+
+  font-family: JosephinSansRegular;
+  font-size: 16px;
+  width: 275px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+}
+
+.delete-featured-artist-button {
+
+  margin-left: 25px;
+  font-family: JosephinSansRegular;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.featured-artist-item {
+
+  display: flex;
+  align-items: center;
+  height: 40px;
+  font-family: JosephinSansRegular;
+  margin: 5px 0 0 0;
+}

@@ -1,0 +1,143 @@
+.cart-greeting {
+
+  color: white;
+  margin-left: 4%;
+  margin-top: 3%;
+  font-family: JosephinSansRegular;
+}
+
+.no-music-in-cart-block {
+
+  display: flex;
+  margin-left: 4%;
+  align-items: center;
+}
+
+.no-music-in-cart-block button {
+
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  width: 145px;
+  height: 39px;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  font-family: JosephinSansRegular;
+}
+
+.tracks-in-cart-block, .albums-in-cart-block {
+
+  width: 33%;
+}
+
+.cart-is-empty-text {
+
+  margin-right: 20px;
+  color: white;
+  font-family: JosephinSansRegular;
+}
+
+.music-in-cart-block {
+
+  display: flex;
+  color: white;
+  font-family: JosephinSansRegular;
+  margin-left: 4%;
+
+}
+
+.albums-in-cart-scrolled-area, .tracks-in-cart-scrolled-area {
+
+  height: 400px;
+  overflow-y: scroll;
+}
+
+.albums-in-cart-scrolled-area {
+
+  margin-left: 4%;
+}
+
+.albums-in-cart-scrolled-area::-webkit-scrollbar {
+  width: 6px;
+  background-color: #F5F5F5;
+}
+
+.albums-in-cart-scrolled-area::-webkit-scrollbar-thumb {
+  background-color: #252b4d;
+}
+
+.albums-in-cart-scrolled-area::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #1b2039;
+}
+
+.tracks-in-cart-scrolled-area::-webkit-scrollbar {
+  width: 6px;
+  background-color: #F5F5F5;
+}
+
+.tracks-in-cart-scrolled-area::-webkit-scrollbar-thumb {
+  background-color: #252b4d;
+}
+
+.tracks-in-cart-scrolled-area::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #1b2039;
+}
+
+.empty-my-cart-button {
+
+  position: absolute;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 5px;
+  color: white;
+  outline: none;
+  cursor: pointer;
+  height: 30px;
+  width: 115px;
+  font-family: JosephinSansRegular;
+  margin-left: 18%;
+}
+
+.empty-my-cart-button:hover, .pay-button:hover {
+
+  box-shadow: 0px 0px 20px 0px white;
+
+}
+
+.total-sum {
+
+  color: #3bc8e7;
+  font-family: JosephinSansRegular;
+  position: absolute;
+  left: 27%;
+  font-size: 20px;
+  top: -17px;
+}
+
+
+.pay-button {
+
+  position: absolute;
+  left: 34%;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 5px;
+  height: 28px;
+  width: 60px;
+  color: white;
+  outline: none;
+  cursor: pointer;
+}
+
+.payment-panel {
+
+  position: fixed;
+  top: 36%;
+  left: 32%;
+  width: 0;
+  height: 0;
+  z-index: 1000000;
+}

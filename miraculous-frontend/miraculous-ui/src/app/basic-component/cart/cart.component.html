@@ -1,0 +1,33 @@
+<div style="position: relative">
+  <button (click)="emptyCart()" class="empty-my-cart-button" *ngIf="albumsInCart.length != 0 || tracksInCart.length != 0">Empty My Cart</button>
+  <p class="total-sum">Total: {{getTotalSumOfOrder(tracksInCart, albumsInCart)}} $</p>
+  <button (click)="showPaymentPanel()" class="pay-button" *ngIf="albumsInCart.length != 0 || tracksInCart.length != 0">Pay</button>
+  <h2 class="cart-greeting">Hi, {{tokenService.getLogin(tokenService.isRememberMeModeOn())}} !</h2>
+  <div class="no-music-in-cart-block" *ngIf="albumsInCart.length == 0 && tracksInCart.length == 0">
+    <p class="cart-is-empty-text">Your cart is empty</p>
+    <button (click)="goToDiscoverPage()">Continue listening to music</button>
+  </div>
+  <div *ngIf="albumsInCart.length != 0 || tracksInCart.length !=0" class="music-in-cart-block">
+    <div class="tracks-in-cart-block">
+      <p *ngIf="tracksInCart.length == 0">There are no tracks in your cart</p>
+      <p>Tracks in Cart: </p>
+      <div class="tracks-in-cart-scrolled-area">
+        <cart-track (onTrackFromCartDeletion)="getTracksInCartByOwnerId()" *ngFor="let track of tracksInCart" [cartTrack]="track"></cart-track>
+      </div>
+    </div>
+    <div class="albums-in-cart-block">
+      <p *ngIf="albumsInCart.length == 0">There are no albums in your cart</p>
+      <p *ngIf="albumsInCart.length != 0">Albums in Cart:</p>
+      <div class="albums-in-cart-scrolled-area">
+        <cart-album (onAlbumFromCartDeletion)="getAlbumsInCartByOwnerId()" *ngFor="let album of albumsInCart" [cartAlbum]="album"></cart-album>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="isPayButtonClicked">
+  <payment-panel (onSuccessfulAddingMusicToPurchased)="completeBuy()" (onClosedPaymentPanel)="closePaymentPanel()" #paymentPanel [totalSum]="getTotalSumOfOrder(tracksInCart, albumsInCart)"  class="payment-panel"></payment-panel>
+</div>
+
+
+
+

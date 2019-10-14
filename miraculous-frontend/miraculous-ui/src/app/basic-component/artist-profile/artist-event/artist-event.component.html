@@ -1,0 +1,12 @@
+<figure class="artist-event">
+  <div class="artist-event-data">
+    <div class="artist-event-cover" [ngStyle]="{'background-image': 'url(' + imagesPath  + event.eventCoverPictureUrlName+')'}"></div>
+    <div class="artist-event-title-location-date-block">
+      <p class="artist-event-title">{{event.eventTitle}}</p>
+      <p class="artist-event-location">{{event.eventLocation}}</p>
+      <p class="artist-event-date">{{event.eventTime}}</p>
+    </div>
+  </div>
+  <p class="artist-event-description">{{event.eventText}}</p>
+  <i class="fa fa-times" *ngIf="isEventDeletionAllowed" (click)="deleteEvent()"></i>
+</figure>

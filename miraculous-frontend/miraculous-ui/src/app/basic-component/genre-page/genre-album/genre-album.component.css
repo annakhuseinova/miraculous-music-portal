@@ -1,0 +1,90 @@
+.album-block {
+
+  height: 100px;
+  width: 430px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-family: JosephinSansRegular;
+  position: relative;
+}
+.free-album-text {
+
+  margin: 0;
+  color: white;
+  position: absolute;
+  top: 0;
+  right: 20px;
+}
+
+.fa-cart-plus {
+
+  position: absolute;
+  left: 248px;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.album-is-in-visitor-cart,.album-liked-by-current-visitor {
+
+  color: #3bc8e7;
+}
+
+.fa-heart {
+
+  color: white;
+  cursor: pointer;
+}
+
+.fa-cart-plus:hover, .fa-heart:hover {
+
+  color: #3bc8e7;
+}
+
+.album-cover {
+
+  margin-left: 10px;
+  width: 80px;
+  height: 90px;
+  margin-right: 10px;
+  background-color: lightgrey;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+}
+
+.album-info-item {
+
+  margin: 5px;
+  display: block;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-decoration: none;
+  color: white;
+  width: 153px;
+}
+
+.artist:hover, .title:hover {
+
+  color: #3bc8e7;
+}
+
+.number-of-tracks {
+
+  margin-left: 30px;
+
+
+}
+
+.heart {
+
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+.number-of-likes {
+
+  margin-left: 3px;
+}

@@ -1,0 +1,17 @@
+<div class="track-block">
+  <figure class="track-cover" [ngStyle]="{'background-image': 'url(' + imagesPath  + purchasedSingleTrack.coverPictureUrlName+')'}"></figure>
+  <div class="track-info">
+    <a [href]="trackPageUrl + purchasedSingleTrack.id" class="track-info-item title">{{purchasedSingleTrack.title}}</a>
+    <a [href]="artistPageUrl + purchasedSingleTrack.artistId" class="track-info-item artist">{{purchasedSingleTrack.artistLogin}}</a>
+    <p class="track-info-item">{{purchasedSingleTrack.genres}}</p>
+  </div>
+  <p class="track-duration">{{purchasedSingleTrack.duration}}</p>
+  <a [href]="songsUrl + purchasedSingleTrack.audioUrlName" download><i class="fa fa-download"></i></a>
+  <i class="fa fa-plus"></i>
+  <div class="play-control" (click)="playOrPauseTrack()">
+    <i  class="fa fa-play" #playIcon></i>
+    <i  class="fa fa-pause" #pauseIcon></i>
+  </div>
+  <button class="delete-from-purchased-singles-button" (click)="deleteSingleTrackFromPurchased()">Delete</button>
+  <audio #track (ended)="setPlayIcon()" [src]="songsUrl + purchasedSingleTrack.audioUrlName"></audio>
+</div>

@@ -1,0 +1,9 @@
+<div class="found-artist-block">
+  <figure class="found-artist-cover" [ngStyle]="{'background-image': 'url(' + imagesPath  + genreArtist.pictureUrlName+')'}"></figure>
+  <div class="found-artist-info">
+    <a class="found-artist-info-item login" [href]="artistPageUrl + genreArtist.id">{{genreArtist.login}}</a>
+    <p class="found-artist-info-item genres">{{genreArtist.genres}}</p>
+  </div>
+  <p class="number-of-tracks">Tracks: {{genreArtist.numberOfTracks}} </p>
+  <p class="number-of-albums">Albums: {{genreArtist.numberOfAlbums}}</p>
+</div>

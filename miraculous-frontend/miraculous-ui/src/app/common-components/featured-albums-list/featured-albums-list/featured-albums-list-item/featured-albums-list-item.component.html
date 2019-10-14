@@ -1,0 +1,7 @@
+<figure class="featured-album-item">
+  <a type="button" [href]="albumPagePath + album.id" class="featured-album-cover-picture" [ngStyle]= "{'background-image': 'url('+imagesPath+ album.albumCoverPictureUrlName+')'}" ></a>
+  <div style="display: flex; margin-top: 8px;">
+    <a type="button" class="featured-album-title" [href]="albumPagePath + album.id">{{album.title}}.</a>
+    <a type="button" class="featured-album-artist" [href]="artistPagePath + album.artistId"> {{album.artistLogin}}</a>
+  </div>
+</figure>

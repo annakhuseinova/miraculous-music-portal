@@ -1,0 +1,243 @@
+.featured-music-block {
+
+  margin-left: 20px;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.show-featured-music-block {
+
+  width: 90%;
+}
+
+.featured-artists-heading, .featured-albums-heading {
+
+  font-size: 20px;
+  font-family: JosephinSansRegular;
+  font-weight: bold;
+}
+
+.set-featured-music-block {
+
+  width: 80%;
+  display: flex;
+}
+
+.featured-music-signature{
+
+  color: black;
+  font-family: "JosephinSansBold";
+  font-size: 22px;
+  margin-bottom: 20px;
+  margin-right: 145px;
+}
+
+.delete-featured-album-button {
+
+  font-family: JosephinSansRegular;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+
+.featured-artist-item, .featured-album-item {
+
+  display: flex;
+  margin: 0;
+  align-items: center;
+  height: 40px;
+  font-family: JosephinSansRegular;
+}
+
+.featured-album-item {
+
+  margin-bottom: 10px;
+}
+
+.delete-featured-album-button {
+
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.album-release-date {
+
+  margin-left: 10px;
+}
+
+
+.add-artists-to-featured-block, .add-albums-to-featured-block {
+
+  display: flex;
+}
+
+.add-to-featured-music-label {
+
+  font-family: JosephinSansRegular;
+  font-size: 16px;
+  margin-right: 15px;
+
+}
+
+.featured-artists-block {
+
+  width: 50%;
+  overflow-y: scroll;
+  min-height: 520px;
+}
+
+.featured-albums-block {
+
+  width: 60%;
+  overflow-y: scroll;
+  min-height: 520px;
+  margin-left: 15px;
+}
+
+.featured-artist-name {
+
+  font-family: JosephinSansRegular;
+  font-size: 16px;
+}
+
+.delete-featured-artist-button {
+
+  margin-left: 25px;
+  font-family: JosephinSansRegular;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.artist-login-input-for-featured-artist, .artist-login-input-for-featured-album {
+
+  border-radius: 5px;
+  outline: none;
+  padding-left: 5px;
+}
+
+.artist-login-input-for-featured-album {
+
+  width: 113px;
+}
+
+.find-artist-to-add-to-featured-button, .find-albums-of-artist-to-add-to-featured-button {
+
+  cursor: pointer;
+  margin-left: 10px;
+  border-radius: 5px;
+  outline: none;
+}
+
+.artist-not-found {
+
+  width: 400px;
+  height: 70px;
+  border-radius: 10px;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  margin: 20px 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: JosephinSansRegular;
+  color: darkred;
+}
+
+.artist-successfully-found-block {
+
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  width: 400px;
+  height: 70px;
+  border-radius: 10px;
+  margin: 20px 0 0 0;
+  display: flex;
+  font-family: JosephinSansRegular;
+  align-items: center;
+  color: darkgreen;
+}
+
+.add-artist-to-featured-button {
+
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  font-family: JosephinSansRegular;
+  background-color: #155724;
+  border-color: #155724;
+  color: white;
+}
+
+.successfully-added-artist-to-featured-message, .failed-to-add-artist-to-featured-message {
+
+  width: 400px;
+  height: 70px;
+  border-radius: 10px;
+  margin: 20px 0 0 0;
+  display: flex;
+  font-family: JosephinSansRegular;
+  align-items: center;
+  justify-content: center;
+
+}
+.failed-to-add-artist-to-featured-message {
+
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  color: darkred;
+}
+
+.successfully-added-artist-to-featured-message {
+
+  color: darkgreen;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+.artist-found-block {
+
+  margin: 0;
+  width: 400px;
+  border-radius: 10px;
+  color: darkgreen;
+  background-color: #d4edda;
+  border-color: white;
+  font-family: JosephinSansRegular;
+}
+
+.found-artist-title {
+
+  margin-left: 20px;
+  padding-top: 20px;
+}
+
+.album-item {
+
+  display: flex;
+  margin-left: 20px;
+  align-items: center;
+}
+
+.album-title {
+
+  margin-right: 10px;
+  width: 150px;
+}
+
+.add-to-featured-albums-button {
+
+  height: 40px;
+  border-radius: 5px;
+  outline: none;
+  background-color: #155724;
+  color: white;
+  font-family: JosephinSansRegular;
+  cursor: pointer;
+  border-color: white;
+}
+
+.no-featured-albums-text, .no-featured-artists-text {
+
+  font-family: JosephinSansRegular;
+}

@@ -1,0 +1,191 @@
+.track-block {
+
+  width: 535px;
+  height: 80px;
+  background-color: #1b2039;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 0 0 0 13px;
+
+}
+
+.track-cover {
+
+  margin-left: 10px;
+  border-radius: 5px;
+  height: 60px;
+  width: 60px;
+  background-color: lightgrey;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+.is-free-text {
+
+  color: white;
+  font-family: JosephinSansRegular;
+  position: absolute;
+  top: -20px;
+  right: 25px;
+}
+
+.fa-shopping-cart {
+
+  font-size: 20px;
+  cursor: pointer;
+  margin-right: 15px;
+  color: white;
+}
+
+.fa-arrow-circle-down {
+
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  margin-right: 17px;
+}
+
+.fa-shopping-cart:hover, .fa-arrow-circle-down:hover, .fa-plus:hover, .fa-heart:hover {
+
+  color: #3bc8e7;
+}
+
+.fa-heart {
+
+  cursor: pointer;
+  color: white;
+  margin-right: 10px;
+}
+
+.fa-plus {
+
+  display: block;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+.number-of-likes {
+
+  color: white;
+  font-family: JosephinSansRegular;
+  width: 30px;
+}
+
+.track-title-and-release-date-block {
+
+  margin: 0;
+  height: 60px;
+}
+
+.track-is-liked-by-current-user, .track-is-in-cart-of-current-visitor {
+
+  color: #3bc8e7;
+}
+
+.track-title, .track-release-date, .track-duration {
+
+  font-family: "JosephinSansBold";
+  color: #3bc8e7;
+  font-size: 16px;
+  margin: 0;
+  width: 170px;
+
+}
+
+.track-release-date {
+
+  margin-top: 5px;
+}
+
+.track-title {
+
+  display: block;
+  margin-top: 5px;
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  text-decoration: none;
+
+}
+
+.track-title:hover {
+
+  color: white;
+}
+
+.track-release-date {
+
+  font-family: "JosephinSansRegular";
+}
+
+.track-duration {
+
+  width: 58px;
+}
+
+.play-sign {
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 63px;
+  width: 63px;
+  display: none;
+  z-index: 10000;
+  background-color: #1b2039;
+  margin: 9px 0 0 9px;
+  border-radius: 10px;
+  opacity: 0.9;
+  background-image: url(~src/assets/images/play-button.png);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 40px 40px;
+}
+
+.pause-sign {
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 63px;
+  width: 63px;
+  display: none;
+  z-index: 10000;
+  background-color: #1b2039;
+  margin: 9px 0 0 9px;
+  border-radius: 10px;
+  opacity: 0.9;
+  background-image: url("~src/assets/images/pause-button.png");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 40px 40px;
+}
+
+.track-cover:hover .play-sign{
+
+  display: block;
+}
+
+.play-control {
+
+  display: flex;
+  align-items: center;
+  height: 60px;
+  justify-content: center;
+  width: 50px;
+  color: white;
+  border-radius: 5px;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+.play-control:hover {
+
+  box-shadow: 0px 0px 20px 0px white;
+}
+

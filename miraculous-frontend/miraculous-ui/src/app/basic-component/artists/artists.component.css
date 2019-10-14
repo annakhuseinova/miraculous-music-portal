@@ -1,0 +1,14 @@
+.genre-artists-block {
+
+  display: flex;
+  flex-wrap: wrap;
+  width: 1030px;
+}
+
+.genre-artists-section-heading {
+
+  color: white;
+  font-family: JosephinSansRegular;
+  font-size: 20px;
+  margin-left: 60px;
+}

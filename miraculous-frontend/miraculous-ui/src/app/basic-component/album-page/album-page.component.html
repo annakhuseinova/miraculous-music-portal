@@ -1,0 +1,52 @@
+<div class="album-page-container">
+  <div class="album-info">
+    <p *ngIf="!album.isFree" class="album-price">{{album.price}}$</p>
+    <p class="free-album-text" *ngIf="album.isFree">Free Album</p>
+    <i class="fa fa-check" *ngIf="album.inCartOfCurrentVisitor"></i>
+    <button *ngIf="!album.isFree" class="add-to-cart-button" (click)="addAlbumToCart()">Add To Cart</button>
+    <figure [ngStyle]="{'background-image': 'url(' + imagesPath  + album.coverPictureUrlName+')'}" class="album-cover"></figure>
+    <div class="album-info-contents">
+      <h6 class="album-title">{{album.title}}</h6>
+      <p class="album-author">By: <a type="button" class="album-author" [href]="artistPageUrl + album.artistId">{{album.artistLogin}}</a></p>
+      <p class="album-release-date">Release Date: {{album.dateOfRelease}}</p>
+      <p class="album-number-of-songs">Number of tracks: {{album.numberOfTracks}}</p>
+      <p class="album-length">Album Duration: {{album.albumDuration}}</p>
+      <p class="album-genres">Genres: {{album.genres}}</p>
+      <p class="album-description">Description: {{album.description}}</p>
+      <i class="fa fa-heart" (click)="putLike()" [ngClass]="{'album-is-liked-by-current-visitor': album.likedByCurrentVisitor}"></i>
+      <p class="album-number-of-likes">{{album.numberOfLikes}}</p>
+    </div>
+  </div>
+  <table class="album-tracks-list">
+    <th style="padding-right: 50px">Play</th>
+    <th style="padding-right: 95px">Song Title</th>
+    <th style="padding-right: 70px">Likes</th>
+    <th style="padding-right: 65px">Duration</th>
+    <th style="width: 65px">Price</th>
+    <th *ngIf="!album.isFree" class="add-to-cart-heading">Add to Cart</th>
+    <th class="download-heading">Download</th>
+    <th>Add to Queue</th>
+    <album-track *ngFor="let albumTrack of albumTracks" [albumTrack]="albumTrack" (onUnauthorizedAttemptToLikeOrAddToCart)="showSignInPanel()"></album-track>
+  </table>
+  <similar-albums [similarAlbums]="similarAlbums"></similar-albums>
+  <section class="album-page-comments-section">
+    <div class="album-page-comments-part">
+      <h5 class="album-page-comments-signature">Comments</h5>
+      <div class="album-comments">
+        <p class="no-comments-text" *ngIf="comments.length == 0">There are no comments yet...</p>
+        <album-comment (onCommentDeletion)=getAlbumComments() *ngFor="let comment of comments" [comment]="comment"></album-comment>
+      </div>
+    </div>
+    <div class="album-page-comments-form-block">
+      <h5 class="album-page-comments-signature">Leave your comment here...</h5>
+      <div class="album-page-comments-form">
+        <textarea [(ngModel)]="commentToBePosted.text" #albumCommentTextArea class="album-page-comments-form-text-input" placeholder="Enter Your Comment Here..." maxlength="200"></textarea>
+        <button (click)="postComment()" [disabled]="albumCommentTextArea.textLength == 0" class="album-page-comments-form-submit-button" >Post Your Comment</button>
+      </div>
+    </div>
+    <div class="sign-in-suggestion">
+      <p>In order to post comments you need to sign in</p>
+      <button (click)="showSignInPanel()">Sign in</button>
+    </div>
+  </section>
+</div>

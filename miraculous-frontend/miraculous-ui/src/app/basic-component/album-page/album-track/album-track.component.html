@@ -1,0 +1,24 @@
+<tr>
+  <audio [src]="albumTrackUrl + albumTrack.audioUrlName" #audio (ended)="stopAlbumTrack()"></audio>
+  <td class="track-id">
+    <button class="play-album-track-button" (click)="playAlbumTrack()" ><i class="fa fa-play"></i>
+      <i class="fa fa-pause"></i></button>
+  </td>
+  <td class="track-title"><a type="button" class="album-track-link" [href]="albumTrackPageUrl + albumTrack.id">{{albumTrack.title}}</a></td>
+  <td class="track-likes"><i [ngClass]="{'track-liked-by-current-visitor': albumTrack.likedByCurrentVisitor}" class="fa fa-heart" (click)="putLike()"></i>
+    <p class="number-of-likes">{{albumTrack.numberOfLikes}}</p>
+  </td>
+  <td class="track-duration">{{albumTrack.duration}}</td>
+  <td class="track-price">{{albumTrack.price}} $</td>
+  <td *ngIf="!albumTrack.isFree" style="position: relative">
+    <i class="fa fa-check" *ngIf="albumTrack.inCartOfCurrentVisitor"></i>
+    <button class="add-track-to-cart-button" (click)="addTrackToCart()">Add To Cart</button></td>
+  <td>
+    <button class="download-track-link"><a style="color: white; text-decoration: none" [href]="albumTrackUrl + albumTrack.audioUrlName" download>Download</a></button>
+  </td>
+  <td>
+    <button class="add-to-queue-button">Add To Queue</button>
+  </td>
+</tr>
+
+

@@ -1,0 +1,21 @@
+<div class="container">
+  <header class="header">
+    <i class="fa fa-bars"></i>
+    <p class="miraculous-admin-signature">Miraculous Admin</p>
+    <i class="fa fa-user"></i>
+    <p class="admin-login-signature">Admin Login</p>
+    <button class="back-to-site-button" (click)="goBackToSite()">Back to Site</button>
+  </header>
+  <main class="main-block">
+    <nav class="navigation-panel">
+      <ul class="list-of-sections">
+        <li><i class="fa fa-users"></i><a class="users-link" routerLink="users">Users</a></li>
+        <li><i class="fa fa-music"></i><a class="featured-music-link" routerLink="featured-music">Featured Music</a></li>
+        <li><i class="fa fa-server"></i><a class="statistics-link" routerLink="statistics">Statistics</a></li>
+      </ul>
+    </nav>
+    <section class="content-block">
+      <router-outlet></router-outlet>
+    </section>
+  </main>
+</div>

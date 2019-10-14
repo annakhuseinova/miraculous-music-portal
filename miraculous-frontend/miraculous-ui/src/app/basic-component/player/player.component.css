@@ -1,0 +1,441 @@
+.player-block {
+
+  background-image: url(~src/assets/images/playerbackgroundpicture.jpg);
+  height: 75px;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  border-radius: 10px;
+  align-items: center;
+  position: relative;
+}
+
+.playing-track-info-block {
+
+  width: 281px;
+  height: 75px;
+  background-color: #3bc8e7;
+  margin: 0;
+  border-radius: 10px;
+  box-shadow: 3px 0 0 0 rgba(0,0,0,0.3);
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.playing-track-info-title, .playing-track-info-artist {
+
+  margin: 0;
+  width: 200px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.playing-track-info-title {
+
+  font-family: "JosephinSansBold";
+}
+
+.playing-track-info-artist {
+
+  font-family: "JosephinSansRegular";
+}
+
+.audioplayer {
+
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.turn-on-previous-track-button {
+
+  background-image: url(~src/assets/images/play-back-picture.png);
+  background-size: 48px 48px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  margin-left: 30px;
+}
+
+.play-button, .pause-button {
+
+  background-image: url(~src/assets/images/play-button.png);
+  outline: none;
+  border: none;
+  background-color: transparent;
+  height: 48px;
+  width: 48px;
+  cursor: pointer;
+  background-size: 48px 48px;
+  background-repeat: no-repeat;
+  margin-left: 16px;
+  margin-right: 5px;
+  border-radius: 50%;
+}
+
+.pause-button {
+
+  background-image: url(~src/assets/images/pause-button.png);
+
+}
+
+
+.turn-on-next-track-button {
+
+  background-image: url(~src/assets/images/play-next-picture.png);
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  background-size: 48px 48px;
+  height: 40px;
+  width: 40px;
+}
+
+.track-progress-bar {
+
+  width: 460px;
+  height: 2px;
+  background-color: white;
+  display: flex;
+  cursor: pointer;
+  position: relative;
+}
+
+.track-handle {
+
+  border-radius: 50%;
+  height: 13px;
+  width: 13px;
+  background-color: #3bc8e7;
+  position: absolute;
+  content: " ";
+  margin: 0;
+  cursor: pointer;
+  top: -6px;
+  left: -4px;
+  box-shadow: 0px 0px 15px rgb(255, 255, 255);
+}
+
+.play-button:hover {
+
+  box-shadow: 0px 0px 20px 0px #3bc8e7;
+}
+
+.volume-control {
+
+  background-image: url(~src/assets/images/volume-control-picture.png);
+  height: 48px;
+  width: 48px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  background-size: 48px 48px;
+  border-radius: 50%;
+  position: relative;
+
+}
+
+.volume-control:hover .volume-list {
+
+  display: block;
+
+}
+
+.volume-list {
+
+  width: 53px;
+  height: 173px;
+  list-style-type: none;
+  padding-right: 20px;
+  line-height: 1;
+  border-radius: 6px;
+  background-color: #fff;
+  border: 1px solid #3bc8e7;
+  padding-top: 20px;
+  position: absolute;
+  top: -210px;
+  left: -32px;
+  display: none;
+
+}
+
+.volume-list li {
+
+  padding: 5px 0px;
+  color: #3bc8e7;
+  font-family: "JosephinSansBold";
+}
+
+.volume-list a {
+
+  text-decoration: none;
+  color: #3bc8e7;
+}
+
+.volume-list a:hover {
+
+  text-decoration: none;
+  color:  #1b2039;
+}
+
+.shuffle-button, .repeat-button  {
+
+  height: 36px;
+  width: 36px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  background-size: 36px 36px;
+  border-radius: 50%;
+
+}
+
+.shuffle-button:hover, .repeat-button:hover, .open-music-queue-button:hover {
+
+  box-shadow: 0px 0px 10px 8px white;
+}
+
+.shuffle-button {
+
+  background-image: url(~src/assets/images/shuffle-picture.png);
+  margin-left: 30px;
+}
+
+.repeat-button {
+
+  background-image: url(~src/assets/images/repeat-picture.png);
+  margin-left: 10px;
+}
+
+.repeat-button-hovered {
+
+  box-shadow: 0px 0px 10px 8px white;
+  background-image: url(~src/assets/images/repeat-picture.png);
+  margin-left: 10px;
+
+}
+
+.open-music-queue-button {
+
+  background-color: #3bc8e7;
+  height: 30px;
+  width: 103px;
+  color: white;
+  font-size: 17px;
+  border-radius: 10px;
+  margin-left: 1%;
+  cursor: pointer;
+  font-family: "JosephinSansBold";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*---------------------------------------------------------*/
+
+.queue-panel-block {
+
+  height: 420px;
+  width: 350px;
+  background-color: #1b2039;
+  border-radius: 10px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: -361px;
+  right: -20px;
+
+}
+
+.toggle-player-block-button {
+
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: #252b4d;
+  position: absolute;
+  background-image: url(../../../assets/images/chevron-down.png);
+  background-repeat: no-repeat;
+  cursor: pointer;
+  background-position: 18px 10px;
+  top: -35px;
+  left: 6px;
+  z-index: -100;
+
+}
+
+.close-queue-panel-block {
+
+  position: absolute;
+  content: "";
+  background-image: url(~src/assets/images/close-icon.png);
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 20px;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+}
+
+.queue-heading {
+
+  color: white;
+  font-family:"JosephinSansBold";
+  margin: 30px 0 0 0;
+  font-size: 22px;
+}
+
+.queue-contents {
+
+  width: 100%;
+  height: 300px;
+  overflow-y: scroll;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.queue-contents::-webkit-scrollbar {
+
+  width: 6px;
+  background-color: #F5F5F5;
+}
+
+.queue-contents::-webkit-scrollbar-thumb {
+
+  background-color: #252b4d;
+}
+
+.queue-contents::-webkit-scrollbar-track {
+
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #1b2039;
+}
+
+.queue-buttons-group {
+
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.save-queue-button, .cancel-queue-button {
+
+  color: white;
+  font-family: "JosephinSansBold";
+  font-size: 16px;
+  background-color: #3bc8e7;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  height: 30px;
+  width: 120px;
+  cursor: pointer;
+
+}
+
+.save-queue-button {
+
+  margin-right: 20px;
+}
+
+.save-queue-button:hover, .cancel-queue-button:hover {
+
+  box-shadow: 0px 0px 20px 0px #3bc8e7;
+}
+
+.queue-track-item {
+
+  width: 310px;
+  height: 60px;
+  border-radius: 10px;
+  position: relative;
+  background-color: #252b4d;
+  margin: 10px 0 0 0;
+
+}
+
+.queue-track-item-cover {
+
+  height: 58px;
+  width: 60px;
+  background-color: lightgrey;
+  border-radius: 10px;
+  margin: 0 0 0 5px;
+
+}
+
+.queue-track-info {
+
+  font-family: "JosephinSansRegular";
+  margin: 0 0 0 75px;
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+
+.queue-track-info-title {
+
+  font-family: "JosephinSansBold";
+}
+
+.queue-track-info p {
+
+  width: 100px;
+
+}
+
+.queue-track-info-title {
+
+  margin: 5px 0 0 0;
+  overflow: hidden;
+}
+
+.queue-track-info-artist {
+
+  margin: 5px 0 0 0;
+  overflow: hidden;
+}
+
+.delete-queue-track-button {
+
+  position: absolute;
+  content: "";
+  background-image: url(~src/assets/images/close-icon.png);
+  background-size: 17px 17px;
+  background-repeat: no-repeat;
+  height: 17px;
+  width: 17px;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+
+}
+
+.tracks-queue {
+
+  position: absolute;
+  bottom: 150px;
+  right: 5px;
+
+}
+
+.progress-fill {
+
+  background-color:#3bc8e7;
+  height: 2px;
+  margin: 0;
+}

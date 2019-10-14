@@ -1,0 +1,145 @@
+.track-block {
+
+  height: 100px;
+  width: 535px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  font-family: JosephinSansRegular;
+  margin-right: 20px;
+  position: relative;
+}
+
+.track-cover {
+
+  margin-left: 10px;
+  width: 80px;
+  height: 90px;
+  margin-right: 10px;
+  background-color: lightgrey;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+}
+
+.free-track-text{ 
+
+  color: white;
+  position: absolute;
+  top: -5px;
+  right: 98px;
+}
+
+.fa-cart-plus {
+
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 39px;
+  right: 253px;
+  font-size: 19px;
+}
+
+
+.track-info-item {
+
+  margin: 5px;
+  display: block;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 153px;
+  color: white;
+  text-decoration: none;
+}
+
+.fa-plus {
+
+  color: white;
+  cursor: pointer;
+  margin-left: 10px;
+
+}
+
+.title:hover, .artist:hover {
+
+  color: #3bc8e7;
+}
+
+.track-duration {
+
+  margin-left: 30px;
+  color: white;
+  width: 50px;
+}
+
+.heart {
+
+  margin-left: 20px;
+}
+
+.number-of-likes {
+
+  color: white;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 25px;
+}
+
+.fa-download, .fa-heart {
+
+  color: white;
+  cursor: pointer;
+}
+
+.fa-heart:hover, .fa-download:hover, .fa-plus:hover {
+
+  color: #3bc8e7;
+}
+
+.fa-download {
+
+  margin-right: 10px;
+}
+
+.play-control {
+
+  background-color: transparent;
+  margin-left: 15px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid white;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+
+}
+
+.play-control:hover {
+
+  box-shadow: 0px 0px 20px 0px white;
+}
+
+.fa-play, .fa-pause {
+
+  color: white;
+  font-size: 23px;
+}
+
+.fa-pause {
+
+  display: none;
+}
+
+.track-liked-by-current-visitor, .track-in-cart-of-visitor  {
+
+  color: #3bc8e7;
+}
+
+
+.fa-cart-plus:hover {
+
+  color: #3bc8e7;
+}

@@ -1,0 +1,11 @@
+<figure class="album-page-comment">
+  <div class="album-page-comment-author-data">
+    <img class="album-page-comment-author-image" [src]="imagesPath + comment.commentAuthorPictureUrlName" >
+    <div class="album-page-comment-author-and-date-block">
+      <p class="album-page-comment-author-name">{{comment.authorLogin}}</p>
+      <p class="album-page-comment-date">{{comment.dateOfComment}}</p>
+    </div>
+  </div>
+  <p class="album-page-comment-content">{{comment.text}}</p>
+  <i (click)="deleteComment()" class="fa fa-times" *ngIf="comment.authorId == tokenStorage.getVisitorId(tokenStorage.isRememberMeModeOn())"></i>
+</figure>

@@ -1,0 +1,56 @@
+.found-track-block {
+
+  height: 100px;
+  width: 400px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-family: JosephinSansRegular;
+  margin-left: 50px;
+
+}
+
+.found-track-cover {
+
+  margin-left: 10px;
+  width: 80px;
+  height: 90px;
+  margin-right: 10px;
+  background-color: lightgrey;
+  border-radius: 10px;
+  background-size: cover;
+}
+
+.found-track-info-item {
+
+  margin: 5px;
+  display: block;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 153px;
+  text-decoration: none;
+  color: white;
+}
+
+.title:hover, .artist:hover {
+
+  color: #3bc8e7;
+}
+
+.track-duration {
+
+  margin-left: 30px;
+}
+
+.heart {
+
+  margin-left: 20px;
+  margin-right: 5px;
+}
+
+.number-of-likes {
+
+  margin-left: 3px;
+}

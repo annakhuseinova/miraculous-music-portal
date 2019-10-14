@@ -1,0 +1,45 @@
+.uploadable-album-track-component {
+
+  display: flex;
+  position: relative;
+  align-items: center;
+  color: white;
+  font-family: JosephinSansRegular;
+  margin-bottom: 5px;
+}
+
+input {
+
+  outline: none;
+  border-radius: 5px;
+  padding-left: 6px;
+}
+
+.title-label, .price, .price-label, .title {
+
+  margin-right: 10px;
+}
+
+.track-duration {
+
+  position: absolute;
+  top: 70%;
+}
+
+.track-size {
+
+  position: absolute;
+}
+
+.price {
+
+  width: 75px;
+}
+
+.fa-times {
+
+  position: absolute;
+  right: 5px;
+  top: -10px;
+  cursor: pointer;
+}

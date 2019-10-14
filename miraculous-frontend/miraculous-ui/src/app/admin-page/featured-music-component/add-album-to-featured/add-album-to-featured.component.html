@@ -1,0 +1,21 @@
+<div style="margin-left: 75px;">
+  <p class="add-music-to-featured-signature">Add Albums to Featured:</p>
+  <div class="add-albums-to-featured-block">
+    <label for="artist-login-input-for-featured-album" class="add-to-featured-music-label">Find album to add to featured by artist: </label>
+    <input [(ngModel)]="artist.login" type="text" placeholder="Enter artist's name" id="artist-login-input-for-featured-album" class="artist-login-input-for-featured-album">
+    <button class="find-albums-of-artist-to-add-to-featured-button" (click)="getArtistAlbumsByArtistLogin()">Find</button>
+  </div>
+  <figure class="artist-not-found" *ngIf="hasArtistNotBeenFound">
+    {{errorMessage}}
+    <i class="fa fa-times" (click)="closeErrorMessage()"></i>
+  </figure>
+  <figure class="artist-found-block" *ngIf="hasArtistBeenFound">
+    <p class="found-artist-title">Found: {{artistLogin}}</p>
+    <p style="margin-left: 20px">Albums:</p>
+    <p *ngIf="artistAlbums.length == 0" class="no-albums-yet-text">There are no albums yet</p>
+    <div *ngIf="artistAlbums.length != 0">
+      <album-to-be-added-to-featured *ngFor="let album of artistAlbums" [album]="album" (onAlbumToFeatured)="updateListOfFeaturedAlbums()"></album-to-be-added-to-featured>
+    </div>
+    <i class="fa fa-times" (click)="closeArtistFoundMessage()"></i>
+  </figure>
+</div>

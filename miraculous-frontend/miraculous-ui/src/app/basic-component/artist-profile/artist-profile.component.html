@@ -1,0 +1,50 @@
+<section class="artist-profile-block">
+  <figure class="artist-profile-picture" [ngStyle]="{'background-image': 'url(' + imagesPath  + fullArtistInfoDto.pictureUrlName+')'}"></figure>
+  <figure class="artist-profile-info">
+    <p class="artist-profile-info-login">{{fullArtistInfoDto.login}}</p>
+    <p class="artist-profile-info-registration-date">Been around since: {{fullArtistInfoDto.dateOfRegistration}}</p>
+    <p class="artist-profile-info-location">Location: <span *ngIf="fullArtistInfoDto.location == null || fullArtistInfoDto.location.length == 0">None</span>
+      {{fullArtistInfoDto.location}}</p>
+    <p class="artist-profile-info-favourite-genres">Genres: <span *ngIf="artistGenres.length == 0">None</span> <span *ngFor="let genre of artistGenres; let isLast=last">
+      {{genre.title}}{{isLast? "": ", "}}
+    </span></p>
+    <p class="artist-profile-info-description">
+      <span *ngIf="fullArtistInfoDto.description == null || fullArtistInfoDto.description.length == 0">None</span>
+      {{fullArtistInfoDto.description}}</p>
+  </figure>
+  <section class="upcoming-events-section">
+    <h5 class="section-heading">Events:</h5>
+    <p class="no-events-yet-text" *ngIf="artistEvents.length == 0">There are no events yet</p>
+    <artist-event [isEventDeletionAllowed]="false" *ngFor="let event of artistEvents" [event]="event"></artist-event>
+  </section>
+  <section class="artist-music-section">
+    <h5 class="section-heading">Music</h5>
+    <section class="artist-albums-section">
+      <p class="music-section-heading">Albums:</p>
+      <p *ngIf="artistAlbums.length == 0" class="no-albums-text">There are no albums yet...</p>
+      <artist-album (onUnauthorizedLikeOrAdditionToCart)="showSignInPanel()" *ngFor="let album of artistAlbums" [album]="album"></artist-album>
+    </section>
+    <section class="artist-tracks-block">
+      <p class="music-section-heading">Tracks:</p>
+      <p class="no-tracks-text" *ngIf="artistTracks.length == 0">There are no tracks yet...</p>
+      <artist-track (onUnauthorizedLikeOrAdditionToCart)="showSignInPanel()" *ngFor="let track of artistTracks" [track]="track"></artist-track>
+    </section>
+  </section>
+  <p class="comments-disabled-text" *ngIf="!fullArtistInfoDto.areCommentsAllowed">Comments are disabled</p>
+  <section class="comments-section" *ngIf="fullArtistInfoDto.areCommentsAllowed">
+    <h5 class="section-heading">Comments</h5>
+    <div class="sign-in-suggestion" *ngIf="tokenService.getToken(tokenService.isRememberMeModeOn())== null">
+      <p>In order to post comments you need to sign in</p>
+      <button (click)="showSignInPanel()">Sign in</button>
+    </div>
+    <div class="comment-form" *ngIf="tokenService.getToken(tokenService.isRememberMeModeOn()) !=null">
+      <h6 class="leave-comment-heading">Leave your comment...</h6>
+      <textarea #commentTextArea required [(ngModel)]="commentToBeSent.text" class="comment-textarea" placeholder="Enter Your Comment Here..."></textarea>
+      <button class="submit-comment-button" (click)="sendComment()" [disabled]="commentTextArea.textLength == 0">Send Comment</button>
+    </div>
+    <div class="comments-block">
+      <p *ngIf="artistComments.length == 0" class="no-comments-yet-text">There are no comments yet..</p>
+      <artist-comment (onCommentDeletion)="getArtistComments()" *ngFor="let comment of artistComments" [comment]="comment"></artist-comment>
+    </div>
+  </section>
+</section>

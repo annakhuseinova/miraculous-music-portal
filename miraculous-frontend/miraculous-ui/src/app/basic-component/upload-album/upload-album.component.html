@@ -1,0 +1,53 @@
+<div class="track-information-form-block">
+  <p class="track-information-signature">Upload Your New Album</p>
+  <div class="track-information-form" enctype="multipart/form-data" method="post">
+    <div class="track-information-form-item">
+      <div>
+        <div class="album-cover" #albumCover>
+          <i (click)="removeAlbumPicture()" class="fa fa-times remove-album-picture-button" *ngIf="isAlbumCoverPictureChosen"></i>
+        </div>
+        <label for="album-cover-picture" class="album-cover-picture-label" >Choose Cover Picture</label>
+        <input type="file" name="album-cover-picture" id="album-cover-picture" #albumCoverPicture class="album-cover-picture" accept=".jpg, .svg, .png"
+               (change)="showCoverPicture()">
+      </div>
+      <label for="select-album-genres" class="select-album-genres-label">Choose Genres Of Album</label>
+      <select class="select-album-genres" id="select-album-genres"#selectAlbumGenres style="width: 300px" (change)="addTagToSelectedGenres()">
+        <option *ngFor="let genre of allGenres" [id]="genre.id">{{genre.title}}</option>
+      </select>
+      <div class="selected-genres" #selectedGenres >
+        <ng-template #selectedGenresVcf></ng-template>
+      </div>
+      <div class="track-duration-and-size-info-block">
+        <p class="album-size-signature">Album size: {{getTotalSizeOfAlbum().toFixed(2)}} Mbs</p>
+        <p class="album-duration-signature">Album duration: {{getTotalDurationOfAlbum().toFixed(2)}} Min</p>
+        <p class="number-of-tracks-signature">Number of tracks : {{uploadableTrackComponents.length}} </p>
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column; position: relative">
+      <label for="album-title-input" class="album-title-input-label">Add Album Title*</label>
+      <input type="text" name="album-title-input" class="album-title-input" id="album-title-input" [(ngModel)]="albumUploadDto.title">
+      <label for="album-description-input" class="album-description-input-label">Add description to your album</label>
+      <textarea [(ngModel)]="albumUploadDto.description" class="album-description-input" rows="15" id="album-description-input"></textarea>
+      <label class="release-date-label">Add Album Release Date</label>
+      <input type="date" name="date" class="release-date-input" [(ngModel)]="albumUploadDto.dateOfRelease">
+      <select class="select-access-policy" #selectAccessPolicy (change)="togglePriceBlock()">
+        <option selected>Paid Access</option>
+        <option>Free Access</option>
+      </select>
+      <label for="album-price-input" class="album-price-input-label" #albumPriceInputLabel *ngIf="!isAlbumInFreeAccess">Add price for your album in $</label>
+      <input [(ngModel)]="albumUploadDto.price" value="0.5" type="number" name="album-price-input" step="0.01" #albumPriceInput *ngIf="!isAlbumInFreeAccess" class="album-price-input" id="album-price-input" value="0">
+      <button class="add-new-track-button" (click)="addNewTrack()">Add New Track</button>
+      <p class="full-album-track-version-text" *ngIf="uploadableTrackComponents.length !=0">Full Album Track Version</p>
+      <p class="preview-album-track-version-text" *ngIf="uploadableTrackComponents.length !=0 && !isAlbumInFreeAccess">Preview Album Track Version</p>
+    </div>
+    <div class="added-tracks-block" #addedTracksBlock>
+      <ng-template #addedTracksContainer>
+      </ng-template>
+    </div>
+    <div class="form-buttons">
+      <button  name="upload-button" class="track-information-form-button" (click)="upload()">Upload</button>
+      <input type="submit" name="cancel-button" class="track-information-form-button" value="Cancel">
+    </div>
+  </div>
+</div>
+<upload-progress-panel [hasValidationFailed]="hasValidationFailed" [validationMessages]="validationErrorMessages" (onCancelledUpload)="cancelUpload()" *ngIf="isUploadInProgress" #uploadProgressPanel (onGoToArtistPageButtonClicked)="goToArtistProfilePage()" [percentOfUpload]="uploadProgressPercent"></upload-progress-panel>

@@ -1,0 +1,66 @@
+<div class="track-information-form-block">
+  <p class="track-information-signature" (click)="isUploadInProgress = true">Upload Your New Track</p>
+  <div class="track-information-form">
+    <div class="track-information-form-item">
+      <div style="position: relative">
+        <div class="album-cover" #albumCover></div>
+        <label for="album-cover-picture" class="album-cover-picture-label" >Choose Cover Picture</label>
+        <input type="file" name="album-cover-picture" id="album-cover-picture" #trackCoverPicture class="album-cover-picture" accept=".jpg, .svg, .png"
+               (change)="showCoverPicture()">
+        <i class="fa fa-times" *ngIf="isTrackCoverPictureChosen" (click)="removeCoverPicture()"></i>
+      </div>
+      <label for="select-album-genres" class="select-album-genres-label">Choose Genres Of Track</label>
+      <select class="select-album-genres" id="select-album-genres"#selectAlbumGenres style="width: 300px" (change)="addTagToSelectedGenres()">
+        <option [id]="genre.id" *ngFor="let genre of allGenres">{{genre.title}}</option>
+      </select>
+      <div class="selected-genres" #selectedGenres >
+        <ng-template #selectedGenresVcf></ng-template>
+      </div>
+      <div class="track-duration-and-size-info-block">
+        <p class="track-size-signature">Track size: {{trackSize}} Mbs</p>
+        <p class="track-duration-signature">Track duration: {{trackDuration}} Min</p>
+      </div>
+      <div style="display: flex">
+        <form style="margin-right: 20px; position: relative" #fullTrackVersionInputForm class="full-track-version-input-form">
+          <label for="single-track-upload-input" class="single-track-upload-input-label" #singleTrackUploadInputLabel>Upload Your Track</label>
+          <audio #fullTrackAudio></audio>
+          <input (change)="showChosenTrackFullVersionFile()" type="file" value="Upload your track" id="single-track-upload-input" class="single-track-upload-input" #singleTrackUploadInput accept="audio/mp3">
+          <figure class="chosen-track-full-version-name" #chosenTrackFullVersionName >
+          </figure>
+          <i class="fa fa-times remove-full-version-track-from-chosen" (click)="removeChosenTrackFullVersionFile(); fullTrackVersionInputForm.reset()" *ngIf="isTrackFullVersionChosen"></i>
+        </form>
+        <form style="position: relative" #previewTrackVersionInputForm>
+          <label *ngIf="!trackUploadDto.isFree" for="cut-version-of-track-upload-input" class="preview-track-upload-input-label"
+                 #previewTrackVersionUploadInputLabel>Preview Track Version <i  *ngIf="isTrackPreviewVersionChosen" class="fa fa-check"></i></label>
+          <input (change)="showChosenTrackPreviewVersionFile()"  type="file" value="Upload your track" id="cut-version-of-track-upload-input" class="preview-track-upload-input" #previewTrackUploadInput accept="audio/mp3">
+          <figure class="chosen-track-preview-version-name" #chosenTrackPreviewVersionName></figure>
+          <i class="fa fa-times remove-preview-version-track-from-chosen" *ngIf="isTrackPreviewVersionChosen" (click)="removeChosenTrackPreviewVersionFile(); previewTrackVersionInputForm.reset()"></i>
+        </form>
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column;">
+      <label for="album-title-input" class="album-title-input-label">Add Track Title*</label>
+      <p class="validation-error-text validation-title-error-text">{{trackUploadError?.title}}</p>
+      <input [(ngModel)]="trackUploadDto.title" type="text" name="album-title-input" class="album-title-input" id="album-title-input">
+      <label for="album-description-input" class="album-description-input-label">Add description to your track</label>
+      <textarea class="album-description-input" rows="15" id="album-description-input" [(ngModel)]="trackUploadDto.description"></textarea>
+      <label class="release-date-label">Add Track Release Date</label>
+      <p class="validation-error-text validation-date-of-release-error-text">{{trackUploadError?.dateOfRelease}}</p>
+      <input type="date" name="date" class="release-date-input" [(ngModel)]="trackUploadDto.dateOfRelease">
+      <p class="validation-error-text validation-is-free-error-text">{{trackUploadError?.isFree}}</p>
+      <select class="select-access-policy" #selectAccessPolicy (change)="togglePriceBlock()">
+        <option selected>Paid Access</option>
+        <option>Free Access</option>
+      </select>
+      <label *ngIf="!trackUploadDto.isFree" for="album-price-input" class="album-price-input-label" #albumPriceInputLabel>Add price for your album in $</label>
+      <p class="validation-error-text validation-price-error-text">{{trackUploadError?.price}}</p>
+      <input *ngIf="!trackUploadDto.isFree" [(ngModel)]="trackUploadDto.price" type="number" name="album-price-input" step="0.01" #albumPriceInput class="album-price-input" id="album-price-input" value="0">
+      <p *ngIf="isStatus406Received" class="error-text">{{this.errorMessage}}</p>
+    </div>
+    <div class="form-buttons">
+      <button (click)="uploadTrack()" name="upload-button" class="track-information-form-button">Upload</button>
+      <button (click)="navigate('artists/'+ tokenService.getVisitorId(tokenService.isRememberMeModeOn()))" name="cancel-button" class="track-information-form-button" >Cancel</button>
+    </div>
+  </div>
+</div>
+<upload-progress-panel (onCancelledUpload)="cancelTrackUpload()" [percentOfUpload]="uploadProgressPercent" *ngIf="isUploadInProgress" (onGoToArtistPageButtonClicked)="goToArtistProfilePage()"></upload-progress-panel>

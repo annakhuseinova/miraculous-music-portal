@@ -1,0 +1,14 @@
+.download-app-picture {
+
+  text-align: center;
+  background-image: url("~src/assets/images/download-app-picture.jpg");
+  height: 90px;
+  width: 728px;
+}
+
+a {
+
+  margin-top: 50px;
+  display: block;
+  margin-left: 400px;
+}

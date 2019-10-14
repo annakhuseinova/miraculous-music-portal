@@ -1,0 +1,10 @@
+<div class="cart-album-block">
+  <figure class="album-cover" [ngStyle]="{'background-image': 'url(' + imagesPath  + cartAlbum.albumCoverPictureUrlName+')'}"></figure>
+  <div class="album-info-block">
+    <p class="album-info-item">{{cartAlbum.title}}</p>
+    <p class="album-info-item">{{cartAlbum.artistLogin}}</p>
+    <p class="album-info-item">{{cartAlbum.genres}}</p>
+  </div>
+  <p class="album-price">{{cartAlbum.price}}$</p>
+  <button class="delete-from-cart-button" (click)="deleteAlbumFromCart()">Delete From Cart</button>
+</div>

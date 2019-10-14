@@ -1,0 +1,266 @@
+.registration-form-block {
+
+  display: flex;
+  width: 930px;
+  min-height: 510px;
+  border-radius: 10px;
+  background-color: #000000;
+  background-image: linear-gradient(to left, #3bc8e7 0%, #20a7c4 100%);
+  position: relative;
+}
+
+.registration-form-headphones-pic {
+
+  width: 368px;
+  height: 395px;
+  margin-left: 51px;
+  margin-top: 58px;
+  background-image: url(../../../assets/images/headphones.png);
+}
+
+.registration-form-contents {
+
+  margin-left: 51px;
+  display: flex;
+  width: 410px;
+  align-items: center;
+  flex-direction: column;
+}
+
+.registration-signature {
+
+  font-family: "JosephinSansRegular";
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 50px;
+  color: #ffffff;
+}
+
+.registration-signature:after {
+
+  position: absolute;
+  content: " ";
+  background-image: url(../../../assets/images/divider.png);
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  margin-top: 50px;
+  margin-left: -120px;
+}
+
+.registration-form {
+
+  display: flex;
+  flex-direction: column;
+  font-family: "JosephinSansRegular";
+  align-items: center;
+  position: relative;
+}
+
+.validation-error-text {
+
+  color: white;
+  margin: 0;
+  position: absolute;
+}
+
+.validation-login-error-text {
+
+  top: -16px;
+}
+
+.validation-email-error-text {
+
+  top: 56px;
+}
+.validation-password-error-text {
+
+  top: 122px;
+}
+
+.validation-confirmation-password-error-text {
+
+  top: 188px;
+}
+
+.validation-description-error-text {
+
+  top: -10px;
+}
+
+.validation-location-error-text {
+
+  top: 85px;
+}
+
+.registration-submit-button {
+
+  width: 160px;
+  height: 40px;
+  border-radius: 20px;
+  border: 1px solid #ffffff;
+  background-color: #3bc8e7;
+  color: #ffffff;
+  font-family: "JosephinSansRegular";
+  cursor: pointer;
+  text-align: center;
+  outline: none;
+  margin-top: 15px;
+}
+
+.registration-submit-button:hover {
+
+  box-shadow: 0px 0px 20px 0px white;
+}
+
+.registration-name-input, .registration-email-input, .registration-password-input ,
+.registration-confirm-password-input{
+
+  color: #777777;
+  font-family: "JosephinSansBold";
+  font-size: 15px;
+  font-weight: 400;
+  width: 410px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  outline: none;
+  padding-left: 18px;
+  padding-right: 20px;
+  margin-bottom: 20px;
+}
+
+.registration-name-input {
+
+  margin-top: 10px;
+}
+
+.login-link, .login-link button {
+
+  color: #ffffff;
+  font-family: "JosephinSansSemiBold";
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  background: none;
+  border: none;
+}
+
+.login-link button {
+
+  cursor: pointer;
+}
+
+.close-button {
+
+  position: absolute;
+  right: -5px;
+  top: -5px;
+  cursor: pointer;
+}
+
+.username-already-exists-message, .username-invalid-message {
+
+  margin: 0;
+  position: absolute;
+  top: -25px;
+  color: darkred;
+  font-size: 18px;
+  font-family: JosephinSansBold;
+}
+
+.register-as-signature {
+
+  color: white;
+  font-family: JosephinSansRegular;
+  margin: 0;
+  margin-bottom: 10px;
+}
+.user-role-input-label, .artist-role-input-label {
+
+  color: white;
+  font-family: JosephinSansRegular;
+}
+
+.additional-artist-information {
+  width: 100%;
+  position: relative;
+}
+
+.artist-description-textarea {
+
+  width: 100%;
+  border-radius: 5px;
+  height: 70px;
+  font-family: JosephinSansRegular;
+  padding-left: 10px;
+  outline: none;
+  margin-top: 10px;
+}
+
+.artist-additional-info-demand-text {
+
+  text-align: center;
+  color: white;
+}
+
+.artist-location-input {
+
+  outline: none;
+  border-radius: 5px;
+  width: 50%;
+  padding-left: 10px;
+  height: 30px;
+  font-family: JosephinSansRegular;
+  margin-top: 16px;
+}
+
+.email-invalid-message {
+
+  position: absolute;
+  top: 30px;
+  left: 147px;
+  color: darkred;
+  font-family: JosephinSansBold;
+  font-size: 17px;
+}
+
+.password-invalid-message {
+
+  position: absolute;
+  top: 95px;
+  left: 110px;
+  color: darkred;
+  font-size: 17px;
+  font-family: JosephinSansBold;
+}
+
+.additional-info-required-signature, .location-required-signature  {
+
+  color: darkred;
+  font-family: JosephinSansBold;
+}
+
+.additional-info-required-signature {
+
+  position: absolute;
+  top: 20px;
+}
+
+.location-required-signature {
+
+  position: absolute;
+  position: absolute;
+  margin-top: -5px;
+  left: 10px;
+}
+
+.registration-failed-message {
+
+  margin: 0;
+  font-family: JosephinSansBold;
+  color: white;
+  position: absolute;
+  top: 18%;
+
+}

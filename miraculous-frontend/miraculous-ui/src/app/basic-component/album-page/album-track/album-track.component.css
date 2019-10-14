@@ -1,0 +1,162 @@
+.play-album-track-button {
+
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  background-color: #1b2039;
+  margin-right: 40px;
+}
+
+.track-title {
+
+  width: 165px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.fa-check {
+
+  color: forestgreen;
+  position: absolute;
+  top: 18px;
+  left: -25px;
+}
+
+.track-artist {
+
+  width: 155px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+  display: block;
+  margin-right: 15px;
+
+}
+
+.track-duration {
+
+  width: 113px;
+
+}
+
+.track-price {
+
+  width: 65px;
+}
+
+.add-track-to-cart-button, .download-track-link, .add-to-queue-button {
+
+  cursor: pointer;
+  width: 90px;
+  height: 25px;
+  border-radius: 15px;
+  background-color: #3bc8e7;
+  border: none;
+  color: #ffffff;
+  font-family: "JosephinSansRegular";
+  font-size: 14px;
+  font-weight: 400;
+  margin-right: 20px;
+  outline: none;
+}
+
+.add-to-queue-button {
+
+  width: 100px;
+}
+
+.download-track-link {
+
+  display: block;
+}
+
+.track-likes {
+
+  width: 120px;
+  position: relative;
+}
+
+.number-of-likes {
+
+  position: absolute;
+  color: white;
+  font-family: JosephinSansRegular;
+  top: -17px;
+  right: 82px;
+}
+
+.album-track-link, .album-track-artist {
+
+  text-decoration: none;
+  color: #3bc8e7;
+}
+
+.album-track-link {
+
+  width: 150px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow-x: hidden;
+  display: block;
+}
+
+.album-track-link:hover, .album-track-artist:hover {
+
+  color: white;
+}
+
+.more-cell {
+
+  position: relative;
+
+}
+
+
+.fa-plus {
+
+  position: absolute;
+  left: 18px;
+  top: 17px;
+}
+
+.fa-download {
+
+  position: absolute;
+  top: 72px;
+  left: 14px;
+}
+
+.more-button {
+
+  margin-right: 25px;
+  width: 50px;
+}
+
+.add-track-to-cart-button:hover, .download-track-link:hover, .add-to-queue-button:hover {
+
+  color: #ffffff;
+  box-shadow: 0px 0px 20px 0px #3bc8e7;
+}
+.fa-play, .fa-pause {
+
+  color: white;
+  font-size: 15px;
+}
+
+.fa-heart:hover {
+
+  color: #3bc8e7;
+  cursor: pointer;
+}
+
+.fa-heart {
+
+  color: white;
+}
+
+.track-liked-by-current-visitor {
+
+  color: #3bc8e7;
+}

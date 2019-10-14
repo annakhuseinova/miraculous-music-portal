@@ -1,0 +1,12 @@
+<section class="user-profile-block">
+  <figure class="user-profile-picture" [ngStyle]="{'background-image': 'url(' + imagesPath + user.pictureUrlName+')'}"></figure>
+  <figure class="user-profile-info">
+    <p class="user-profile-info-login">{{user.login}}</p>
+    <p class="user-profile-info-registration-date">Been around since: {{user.dateOfRegistration}}</p>
+    <p class="user-profile-info-location">Location: {{user.location}}</p>
+    <p class="user-profile-info-favourite-genres">Favourite Genres: <span  *ngFor="let genre of userFavouriteGenres; let isLast=last">
+      {{genre.title}}{{isLast ? '' : ', '}} </span></p>
+    <p class="user-profile-info-description">Description: {{user.description}}</p>
+  </figure>
+</section>
+

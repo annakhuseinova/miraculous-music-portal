@@ -1,0 +1,143 @@
+.header {
+
+  background-color: #007bff;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+
+.fa-bars {
+
+  color: white;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.miraculous-admin-signature, .admin-login-signature {
+
+  font-family: "JosephinSansBold";
+  color: white;
+  font-size: 20px;
+}
+.fa {
+
+  margin-right: 15px;
+}
+.fa-user {
+
+  color: white;
+  position: absolute;
+  right: 151px;
+  top: 36%;
+}
+
+.admin-login-signature {
+
+  position: absolute;
+  right: 30px;
+  top: 28%;
+  margin: 0;
+
+}
+
+.main-block {
+
+  height: 100%;
+  width: 100%;
+  display: flex;
+  background-color: white;
+}
+
+.navigation-panel {
+
+  background-color: #343a40;
+  width: 15%;
+  min-height: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.navigation-panel li a:hover {
+
+  color: #3bc8e7;
+}
+
+.navigation-panel li {
+
+  margin-bottom: 10px;
+}
+
+.back-to-site-button {
+
+  margin-left: 15px;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 1px solid white;
+  width: 100px;
+  height: 25px;
+  color: white;
+  cursor: pointer;
+}
+
+.content-block {
+
+  height: 100%;
+  width: 85%;
+}
+
+.list-of-sections {
+
+  list-style-type: none;
+  font-family: "JosephinSansRegular";
+  color: white;
+
+  margin-top: 30px;
+}
+
+.users-block {
+
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.featured-music-block {
+
+  margin-left: 20px;
+}
+
+.statistics-block {
+
+  margin-left: 20px;
+}
+
+.statistics-signature, .featured-music-signature, .users-signature {
+
+  color: black;
+  font-family: "JosephinSansBold";
+
+  margin-bottom: 20px;
+}
+
+.statistics-facts-list {
+
+  list-style-type: none;
+}
+
+.statistics-facts-list li  {
+
+  font-family: "JosephinSansRegular";
+  color: black;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.users-link, .statistics-link, .featured-music-link {
+
+  text-decoration: none;
+  color: white;
+  font-size: 17px;
+}

@@ -1,0 +1,168 @@
+.login-form-block {
+
+  display: flex;
+  width: 930px;
+  height: 510px;
+  border-radius: 10px;
+  background-color: #000000;
+  background-image: linear-gradient(to left, #3bc8e7 0%, #20a7c4 100%);
+  position: relative;
+}
+
+.login-form-headphones-pic {
+
+  width: 368px;
+  height: 395px;
+  margin-left: 51px;
+  margin-top: 58px;
+  background-image: url(../../../assets/images/headphones.png);
+}
+
+.login-message {
+
+  position: absolute;
+  top: 140px;
+  color: white;
+  font-family: JosephinSansRegular;
+}
+
+.login-form-contents {
+
+  margin-left: 51px;
+  margin-top: 58px;
+  display: flex;
+  width: 410px;
+  align-items: center;
+  flex-direction: column;
+}
+
+.login-signature {
+
+  font-family: "JosephinSansRegular";
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 50px;
+  color: #ffffff;
+}
+
+.login-signature:after {
+
+  position: absolute;
+  content: " ";
+  background-image: url(../../../assets/images/divider.png);
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  margin-top: 50px;
+  margin-left: -120px;
+}
+
+.login-form {
+
+  display: flex;
+  flex-direction: column;
+  font-family: "JosephinSansRegular";
+  align-items: center;
+  position: relative;
+}
+
+.login-submit-button {
+
+  width: 160px;
+  height: 40px;
+  border-radius: 20px;
+  border: 1px solid #ffffff;
+  background-color: #3bc8e7;
+  color: #ffffff;
+  font-family: "JosephinSansRegular";
+  cursor: pointer;
+  margin-top: 30px;
+  text-align: center;
+  outline: none;
+}
+.login-submit-button:hover {
+
+  box-shadow: 0px 0px 20px 0px white;
+}
+.login-name-input, .login-email-input {
+
+  color: #777777;
+  font-family: "JosephinSansBold";
+  font-size: 15px;
+  font-weight: 400;
+  width: 410px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  outline: none;
+  padding-left: 18px;
+  padding-right: 20px;
+  margin-bottom: 20px;
+}
+
+
+.login-remember-me-checkbox-block {
+
+  display: flex;
+  align-self: flex-start;
+}
+
+.login-remember-me-checkbox-label {
+
+  color: #ffffff;
+  font-family: "JosephinSans";
+  font-size: 15px;
+  font-weight: 400;
+
+}
+
+.forgot-password-link {
+
+  margin-top: 30px;
+
+}
+
+.forgot-password-link, .register-link, .register-link a {
+
+  color: #ffffff;
+  font-family: "JosephinSansSemiBold";
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.close-button {
+
+  position: absolute;
+  right: -5px;
+  top: -5px;
+  cursor: pointer;
+}
+
+.register-link button {
+
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-family: "JosephinSansSemiBold";
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.login-invalid-message {
+
+ position: absolute;
+  top: -43px;
+  color: darkred;
+  font-family: JosephinSansBold;
+}
+
+.password-invalid-message {
+
+  position: absolute;
+  top: 29px;
+  color: darkred;
+  font-family: JosephinSansBold;
+}

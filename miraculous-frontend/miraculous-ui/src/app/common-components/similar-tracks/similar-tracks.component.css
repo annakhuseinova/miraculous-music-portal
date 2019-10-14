@@ -1,0 +1,80 @@
+.featured-albums-signature {
+
+  color: #3bc8e7;
+  font-family: "JosephinSansSemiBold";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 50px;
+  margin-left: 48px;
+  position: relative;
+  margin-top: 20px;
+}
+
+.featured-albums-signature:after {
+
+  content: " ";
+  position: absolute;
+  background-image: url("../../../assets/images/blue-divider.png");
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 2px;
+  bottom: 0;
+  left: -15px;
+}
+
+.container {
+
+  width: 1085px;
+  margin-bottom: 70px;
+  margin-left: 40px;
+
+}
+
+.ng2-carouselamos-wrapper {
+
+  width: 1000px;
+}
+
+
+.featured-track-picture {
+
+  object-fit: cover;
+  width: 250px;
+  height: 250px;
+  border-radius: 5px;
+}
+
+.left-arrow, .right-arrow {
+
+  outline: none;
+  cursor: pointer;
+}
+
+.left-arrow {
+  margin-top: -100px;
+
+}
+
+.artist-name, .track-name {
+
+  font-family: JosephinSansBold;
+  color: #ffffff;
+  display: block;
+  text-decoration: none;
+}
+
+.artist-name {
+
+  margin-bottom: 5px;
+}
+
+
+.artist-name:hover, .track-name:hover {
+
+  color: #3bc8e7;
+}
+
+.track-name {
+
+  font-family: JosephinSansRegular;
+}

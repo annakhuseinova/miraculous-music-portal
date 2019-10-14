@@ -1,0 +1,136 @@
+.queue-panel-block {
+
+  height: 420px;
+  width: 350px;
+  background-color: #1b2039;
+  border-radius: 10px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: -361px;
+  right: -20px;
+  border: 1px solid #14182a;
+  padding-left: 20px;
+
+}
+
+.toggle-player-block-button {
+
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: #252b4d;
+  position: absolute;
+  background-image: url(../../../../assets/images/chevron-up.png);
+  background-repeat: no-repeat;
+  cursor: pointer;
+  background-position: 18px 10px;
+  top: -35px;
+  left: 6px;
+  z-index: -100;
+  padding-left: 25px;
+
+}
+.close-queue-panel-block {
+
+  position: absolute;
+  content: "";
+  background-image: url(~src/assets/images/close-icon.png);
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 20px;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+
+}
+
+.queue-heading {
+
+  color: white;
+  font-family:"JosephinSansBold";
+  margin: 30px 0 0 0;
+  font-size: 22px;
+}
+
+.queue-contents {
+
+  width: 100%;
+  height: 300px;
+  overflow-y: scroll;
+  margin-top: 10px;
+}
+
+.queue-contents::-webkit-scrollbar {
+
+  width: 6px;
+  background-color: #F5F5F5;
+}
+
+.queue-contents::-webkit-scrollbar-thumb {
+
+  background-color: #252b4d;
+}
+
+.queue-contents::-webkit-scrollbar-track {
+
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #1b2039;
+}
+
+.queue-buttons-group {
+
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.save-queue-button, .cancel-queue-button {
+
+  color: white;
+  font-family: "JosephinSansBold";
+  font-size: 16px;
+  background-color: #3bc8e7;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  height: 30px;
+  width: 120px;
+  cursor: pointer;
+
+}
+
+.save-queue-button {
+
+  margin-right: 20px;
+}
+
+.save-queue-button:hover, .cancel-queue-button:hover {
+
+  box-shadow: 0px 0px 20px 0px #3bc8e7;
+}
+
+.no-tracks-in-queue-text {
+  font-family: JosephinSansRegular;
+  color: white;
+  margin-left: 10%;
+}
+
+.fa-check {
+
+  margin-right: 7px;
+  color: forestgreen;
+}
+
+.queue-saved-text {
+
+  position: absolute;
+  right: 40px;
+  bottom: 4px;
+  color: white;
+  font-family: JosephinSansRegular;
+}

@@ -1,0 +1,20 @@
+<section class="featured-music-block">
+  <div class="show-featured-music-block">
+    <div style="display: flex">
+      <div class="featured-artists-block">
+        <p class="featured-artists-heading">Featured Artists</p>
+        <p *ngIf="featuredArtists.length == 0" class="no-featured-artists-text">There are no featured artists</p>
+        <featured-artist (onDeletionOfArtistFromFeatured)="getListOfFeaturedArtists()" *ngFor="let artist of featuredArtists" [featuredArtist]="artist"></featured-artist>
+      </div>
+      <div class="featured-albums-block">
+        <p class="featured-albums-heading">Featured Albums</p>
+        <p *ngIf="featuredAlbums.length == 0" class="no-featured-albums-text">There are no featured albums</p>
+        <featured-album *ngFor="let album of featuredAlbums" [featuredAlbum]="album" (onAlbumDeletionFromFeaturedSuccess)="getListOfFeaturedAlbums()"></featured-album>
+      </div>
+    </div>
+  </div>
+  <div class="set-featured-music-block">
+   <add-artist-to-featured (onArtistAdditionToFeatured)="getListOfFeaturedArtists()"></add-artist-to-featured>
+    <add-album-to-featured  (onUpdateListOfFeaturedAlbums)="getListOfFeaturedAlbums()"></add-album-to-featured>
+  </div>
+</section>

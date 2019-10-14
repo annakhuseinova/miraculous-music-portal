@@ -1,0 +1,61 @@
+.found-album-block {
+
+  height: 100px;
+  width: 430px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-left: 50px;
+  color: white;
+  font-family: JosephinSansRegular;
+}
+
+.fa-heart {
+
+  color: white;
+}
+
+.found-album-cover {
+
+  margin-left: 10px;
+  width: 80px;
+  height: 90px;
+  margin-right: 10px;
+  background-color: lightgrey;
+  border-radius: 10px;
+  background-size: cover;
+}
+
+.found-album-info-item {
+
+  margin: 5px;
+  display: block;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-decoration: none;
+  color: white;
+  width: 153px;
+}
+
+.artist:hover, .title:hover {
+
+  color: #3bc8e7;
+}
+
+.number-of-tracks {
+
+  margin-left: 30px;
+}
+
+.heart {
+
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+.number-of-likes {
+
+  margin-left: 3px;
+}

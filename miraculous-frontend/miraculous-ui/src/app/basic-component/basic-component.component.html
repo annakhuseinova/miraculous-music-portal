@@ -1,0 +1,121 @@
+<div #container class="basic-component-container">
+<div class="navigation-panel" #navigationPanel>
+  <a routerLink="discover" (click)="navigate('discover')" class="navigation-panel-logo"><img src="assets/images/miraculous-logo.png"></a>
+  <ul class="navigation-upper-link-list">
+    <li><a routerLink="discover" (click)="navigate('discover')"><img src="assets/icons/discover-icon.svg" title="Discover"></a></li>
+    <li><a routerLink="albums" (click)="navigate('albums')"><img src="assets/icons/albums-icon.png" title="Albums"></a></li>
+    <li><a routerLink="performers" (click)="navigate('performers')"><img src="assets/icons/artists-icon.png" title="Artists"></a></li>
+    <li><a routerLink="genres" (click)="navigate('genres')"><img src="assets/icons/genres-icon.png" title="Genres"></a></li>
+    <li><a routerLink="top-tracks" (click)="navigate('top-tracks')"><img src="assets/icons/top-tracks-icon.png" title="Top Tracks"></a></li>
+    <li><a routerLink="free-music" (click)="navigate('free-music')"><img src="assets/icons/free-music-icon.png" title="Free Music"></a></li>
+    <li style="position: relative;"><a style="text-decoration: none; height: 35px;" routerLink="search" (click)="navigate('search')"><i class="fa fa-search"></i></a></li>
+  </ul>
+  <ul class="navigation-lower-link-list">
+    <li *ngIf="tokenStorageService.getToken(tokenStorageService.isRememberMeModeOn()) != null"><a routerLink="cart" (click)="navigate('cart')"><img src="assets/icons/purchased-music-icon.png" title="Cart"></a></li>
+    <li *ngIf="tokenStorageService.getToken(tokenStorageService.isRememberMeModeOn()) != null"><a routerLink="purchased-music" (click)="navigate('purchased-music')"><img src="assets/icons/downloads-icon.png" title="Purchased Music"></a></li>
+  </ul>
+</div>
+<div class="right-block">
+  <div class="search-panel">
+    <h5 class="trending-songs-signature"><a type="button" (click)="navigate('/top-tracks')" class="top-songs-list">Top songs: {{topSongs}} </a></h5>
+    <figure class="languages-signature" (click)="showInternalizationPanel()" style="cursor: pointer">Languages
+      <img src="assets/icons/language-icon.png" class="language-icon" ></figure>
+    <figure class="user-profile-circle" *ngIf="tokenStorageService.getToken(tokenStorageService.isRememberMeModeOn()) != null && role !='admin'" [ngStyle]="{'background-image': 'url('+ imagesPath + tokenStorageService.getPictureUrl(tokenStorageService.isRememberMeModeOn())+')'}">
+      <ul class="profile-dropdown-list" *ngIf="tokenStorageService.getRole(tokenStorageService.isRememberMeModeOn()) == 'user' || tokenStorageService.getRole(tokenStorageService.isRememberMeModeOn()) == 'artist'">
+        <li *ngIf="tokenStorageService.getRole(tokenStorageService.isRememberMeModeOn()) == 'user'"><a  (click)="navigate('user-profile/'+ tokenStorageService.getVisitorId(tokenStorageService.isRememberMeModeOn())+'')">Profile</a></li>
+        <li *ngIf="tokenStorageService.getRole(tokenStorageService.isRememberMeModeOn()) == 'artist'"><a routerLink="artist/ " (click)="navigate('artists/'+ tokenStorageService.getVisitorId(tokenStorageService.isRememberMeModeOn())+'')">Profile </a></li>
+        <li *ngIf="tokenStorageService.getRole(tokenStorageService.isRememberMeModeOn()) == 'user'"><a (click)="navigate('edit-user-profile/'+tokenStorageService.getVisitorId(tokenStorageService.isRememberMeModeOn())+'')">Settings </a></li>
+        <li *ngIf="tokenStorageService.getRole(tokenStorageService.isRememberMeModeOn()) == 'artist'"><a (click)="navigate('edit-artist-profile/'+tokenStorageService.getVisitorId(tokenStorageService.isRememberMeModeOn())+'')">Settings </a></li>
+        <li><a (click)="logOut()">Logout</a></li>
+      </ul>
+    </figure>
+    <figure class="upload-music-signature" *ngIf="tokenStorageService.getRole(tokenStorageService.isRememberMeModeOn()) == 'artist'">
+      Upload Music
+      <ul class="dropdown-list">
+        <li *ngIf="tokenStorageService.getRole(tokenStorageService.isRememberMeModeOn()) == 'artist'" class="dropdown-list-item"><a type="button" (click)="navigate('upload-track')">Upload Track</a></li>
+        <li *ngIf="tokenStorageService.getRole(tokenStorageService.isRememberMeModeOn()) == 'artist'" class="dropdown-list-item"><a type="button" (click)="navigate('upload-album')">Upload Album</a></li>
+      </ul>
+    </figure>
+    <button *ngIf="tokenStorageService.getToken(tokenStorageService.isRememberMeModeOn()) == null" class="register-button" (click)="showRegistrationComponent()">Register</button>
+    <button *ngIf="tokenStorageService.getToken(tokenStorageService.isRememberMeModeOn()) == null" class="login-button" (click)="showLoginComponent()">Login</button>
+    <button class="admin-page-button" (click)="switchToAdminPage()" *ngIf="role === 'admin'">Admin</button>
+  </div>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+  <footer class="footer">
+    <figure class="footer-miraculous-logo">
+      <img src="assets/images/miraculous-logo.png">
+      <p class="miraculous-signature">Miraculous</p>
+    </figure>
+    <div class="footer-contents">
+      <div class="footer-contents-columns">
+        <div class="footer-miraculous-text-column">
+          <h6 class="footer-column-heading">Miraculous</h6>
+          <p class="footer-miraculous-text-column-text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure dolor.
+          </p>
+        </div>
+        <div class="download-our-app-column">
+          <h6 class="footer-column-heading">Download Our App</h6>
+          <p class="footer-miraculous-text-column-text">Go Mobile with our app.
+            Listen to your favourite songs at just one click. Download Now !</p>
+          <div class="download-our-app-column-links">
+            <a href="#"><img src="assets/images/google-play-picture.png"></a>
+            <a href="#"><img src="assets/images/app-store-picture.png"></a>
+            <a href="#"><img src="assets/images/app-store-picture.png" style="margin-top: 14px"></a>
+          </div>
+        </div>
+        <div class="subscribe-column">
+          <h6 class="footer-column-heading">Subscribe</h6>
+          <p class="footer-miraculous-text-column-text">Subscribe to our newsletter and get latest updates and offers.</p>
+          <form class="footer-subscription-column-form">
+            <input type="" name="subscription-column-name-input" class="subscription-column-name-input" placeholder="Enter Your Name">
+            <input type="email" name="subscription-column-email-input" class="subscription-column-email-input" placeholder="Enter Your Email">
+            <input type="submit" name="subscription-column-submit-button" class="subscription-column-submit-button" value="Sign Me Up">
+          </form>
+        </div>
+        <div class="contact-us-column">
+          <h6 class="footer-column-heading">Contact Us</h6>
+          <figure class="contact-us-column-item">
+            <img src="assets/images/phone-call-icon.png">
+            <p>Call us : <br>
+              (+1) 202-555-0176, (+1) 2025-5501</p>
+          </figure>
+          <figure class="contact-us-column-item">
+            <img src="assets/images/phone-call-icon.png">
+            <p>Email us : <br>
+              demo@mail.com, dummy@mail.com</p>
+          </figure>
+          <figure class="contact-us-column-item">
+            <img src="assets/images/phone-call-icon.png">
+            <p>
+              Walk in : <br>
+              598 Old House Drive, London
+            </p>
+          </figure>
+          <figure class="follow-us-part">
+            <p>Follow us: </p>
+            <a href="#"><img src="assets/images/facebook-icon.png"></a>
+            <a href="#"><img src="assets/images/linkedin-icon.png"></a>
+            <a href="#"><img src="assets/images/twitter-icon.png"></a>
+            <a href="#"><img src="assets/images/googleplus-icon.png"></a>
+          </figure>
+        </div>
+      </div>
+    </div>
+    <div class="footer-contents-lower-part">
+      <p class="footer-contents-lower-part-text">Copyright &copy; {{currentYear| date: "yyyy"}}<span class="footer-contents-lower-part-blue-text">
+        Miraculous </span>All rights reserved.</p>
+    </div>
+  </footer>
+  <internalization-panel class="internalization-component" (closedInternalizationPanel)="closeInternalizationPanel()" #internalizationPanelComponent (appliedLanguage)="changeLanguage()"></internalization-panel>
+  <login-component (onSuccessfulAuthorization)="showCommentFormsAndHideSignInSuggestionsInChildComponents()" (switchedToRememberMeAuthMode)="setRememberMeAuthMode(isRememberMeModeOn)" class="login-component" (closedLoginComponent)="closeLoginComponent()" #loginComponent (switchedToRegistrationComponent)="switchToRegistrationForm()"></login-component>
+  <registration-component class="registration-component" #registrationComponent (closedRegistrationComponent)="closeRegistrationComponent()" (switchedToLoginComponent)="switchToLoginForm()"></registration-component>
+  <div class="darkening-overflow" #darkeningOverflow></div>
+</div>
+</div>
+<player *ngIf="tokenStorageService.getToken(tokenStorageService.isRememberMeModeOn()) != null" class="player" (onToggledPlayerBlock)="showOrHidePlayer()"></player>
+
+

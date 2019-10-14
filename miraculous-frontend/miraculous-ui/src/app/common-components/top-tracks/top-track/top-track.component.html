@@ -1,0 +1,31 @@
+<figure class="audiotrack">
+  <audio [src]="songPathUrl + topTrack.audioUrlName" controls class="audiotrack-sound" #audio (ended)="setIsPlayingToFalse()"></audio>
+  <figure class="audiotrack-number">{{numberOfTrack}}</figure>
+  <figure class="audiotrack-picture"  (click)="startOrStopPlaying()" (mouseleave)="hideGifPicture()" (mouseenter)="showGifPicture()" [ngStyle]="{'background-image': 'url(' + imagesPath  + imageUrlName+')'}"></figure>
+  <figure class="audiotrack-information">
+    <a type="button" class="audiotrack-title" [href]="trackPageUrl + topTrack.id">{{topTrack.title}}</a>
+    <a type="button" class="audiotrack-author" [href]="artistPageUrl + topTrack.artistId">{{topTrack.artistLogin}}</a>
+    <p>Album: <a class="album-page-link" type="button" [href]="albumPageUrl + topTrack.albumId" *ngIf="albumTitle != null; else noAlbumText">{{albumTitle}}</a>
+      <ng-template #noAlbumText>None</ng-template>
+    </p>
+  </figure>
+  <figure class="audiotrack-length">{{topTrack.duration}}</figure>
+  <figure style="width: 100px; display: flex">
+    <i class="fa fa-heart" title="Like The Track" [ngClass]="{'track-liked-by-current-user': topTrack.likedByCurrentVisitor}" (click)="putLike()"></i>
+    <p class="number-of-likes">{{topTrack.numberOfLikes}}</p>
+    <i class="fa fa-shopping-cart" title="Add To Cart" (click)="addTrackToCart()" [ngClass]="{'track-in-cart': topTrack.inCartOfCurrentVisitor}"></i>
+    <i class="fa fa-ellipsis-h">
+      <ul class="track-options-list">
+        <i class="fa fa-plus"></i>
+        <i class="fa fa-download"></i>
+        <li>
+          <a type="button" (click)="addTrackToQueue()">Add To Queue</a>
+        </li>
+        <li>
+          <a [href]="songPathUrl + topTrack.audioUrlName" download>Download</a>
+        </li>
+      </ul>
+    </i>
+  </figure>
+  <p class="price">{{topTrack.price}} $</p>
+</figure>

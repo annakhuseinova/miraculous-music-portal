@@ -1,0 +1,497 @@
+.edit-profile-form {
+
+  background-color: #1b2039;
+  min-height: 513px;
+  width: 60%;
+  border-radius: 15px;
+  padding: 50px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 13%;
+  margin-top: 4%;
+  position: relative;
+}
+
+.edit-profile-signature {
+
+  font-size: 26px;
+  color: #fff;
+  font-weight: 400;
+  margin-bottom: 30px;
+  font-family: "JosephinSansRegular";
+  position: relative;
+
+}
+
+.delete-artist-photo-button {
+
+  position: absolute;
+  top: 324px;
+  border-radius: 5px;
+  background-color: transparent;
+  color: white;
+  height: 28px;
+  width: 110px;
+  outline: none;
+  cursor: pointer;
+}
+
+.user-profile-picture {
+
+  background-color: lightgrey;
+  border-radius: 50%;
+  height: 182px;
+  width: 190px;
+  position: relative;
+  background-size: cover;
+}
+
+.user-profile-picture:hover .user-profile-picture-update-picture-block {
+
+  opacity: 0.6;
+}
+
+.user-profile-picture-update-picture-block {
+
+  border-radius: 50%;
+  opacity: 0;
+  background-color: black;
+  position: absolute;
+  height: 178px;
+  width: 188px;
+  border: 2px solid #3bc8e7;
+
+}
+
+.user-profile-picture-update-picture-button {
+
+  position: absolute;
+  bottom: 50px;
+  left: 34px;
+  border: 1px solid black;
+  cursor: pointer;
+  opacity: 1;
+  font-family: "JosephinSansBold";
+  font-size: 18px;
+  color:  #3bc8e7;
+}
+
+.choose-event-label {
+
+  position: absolute;
+  bottom: 70px;
+  left: 23px;
+  border: 1px solid black;
+  cursor: pointer;
+  opacity: 1;
+  font-family: "JosephinSansBold";
+  font-size: 15px;
+  color: #3bc8e7;
+}
+
+.user-photo {
+
+  height: 155px;
+  width: 155px;
+  display: none;
+}
+
+.group-of-inputs {
+
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 700px;
+  width: 60%;
+  padding-top: 45px;
+  flex-direction: column;
+  position: relative;
+
+}
+
+.existing-events-block {
+
+  margin-right: 40px;
+}
+
+.my-events-heading {
+
+  font-size: 18px;
+  color: white;
+  font-family: JosephinSansRegular;
+  text-align: center;
+  position: relative;
+}
+
+.remove-event-picture {
+
+  position: absolute;
+  right: 5px;
+  top: 70px;
+  font-size: 25px;
+  cursor: pointer;
+  color: #3bc8e7;
+}
+
+.my-events-list-heading {
+
+  color: #3bc8e7;
+  font-family: JosephinSansRegular;
+  font-size: 20px;
+}
+
+.new-event-form {
+
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.new-event-form input, textarea {
+
+  display: block;
+  outline: none;
+  height: 25px;
+  padding: 0px 20px;
+  font-size: 16px;
+  line-height: 40px;
+  color: #777777;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  font-family: "JosephinSansRegular";
+  margin-bottom: 10px;
+  width: 200px;
+}
+
+.new-event-form textarea {
+
+  height: 160px;
+}
+
+.list-of-existing-events {
+
+  overflow-y: scroll;
+  width: 260px;
+  height: 220px;
+}
+
+.list-of-existing-events::-webkit-scrollbar {
+  width: 6px;
+  background-color: #F5F5F5;
+  margin-left: 5px;
+}
+
+.list-of-existing-events::-webkit-scrollbar-thumb {
+  background-color: #3bc8e7;
+  margin-left: 5px;
+}
+
+.list-of-existing-events::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #1b2039;
+  margin-left: 5px;
+}
+
+.remove-user-photo {
+
+  position: absolute;
+  right: -74px;
+  top: 43px;
+  font-size: 25px;
+  color: #3bc8e7;
+  cursor: pointer;
+}
+
+.event-cover-picture {
+
+  position: relative;
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  background-color: lightgrey;
+  margin-bottom: 35px;
+
+}
+
+.event-choose-cover-picture-block {
+
+  display: none;
+  border-radius: 50%;
+  width: 177px;
+  height: 178px;
+  background-color: black;
+  border: 2px solid #3bc8e7;
+}
+
+.event-cover-picture:hover .event-choose-cover-picture-block {
+
+  opacity: 0.6;
+  display: block;
+}
+
+.group-of-inputs input {
+
+  height: 40px;
+  padding: 0px 20px;
+  font-size: 16px;
+  line-height: 40px;
+  color: #777777;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  outline: none;
+  font-family: "JosephinSansRegular";
+  margin-right: 30px;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+.user-name-input {
+
+  margin-top: 30px;
+}
+
+.user-profile-description-textarea {
+
+  width: 102%;
+  border-radius: 10px;
+  outline: none;
+  padding-left: 20px;
+  padding-top: 20px;
+  height: 160px;
+}
+
+.form-buttons-group {
+
+  margin-top: 60px;
+  margin-left: 50px;
+}
+
+.form-submit-button, .cancel-form-button, .add-event-button {
+
+  width: 120px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: #3bc8e7;
+  border: none;
+  color: #ffffff;
+  font-family: "JosephinSansRegular";
+  font-size: 18px;
+  font-weight: 400;
+  margin-right: 20px;
+  outline: none;
+  cursor: pointer;
+}
+
+.form-submit-button:hover, .cancel-form-button:hover,.delete-profile-button:hover {
+
+  box-shadow: 0px 0px 10px 0px white;
+
+}
+
+.add-event-button:hover {
+
+  box-shadow: 0px 0px 10px 0px #3bc8e7;
+}
+
+.liked-music-privacy-checkbox-label {
+
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+#liked-music-privacy-checkbox {
+
+  height: 39px;
+  width: 25px;
+  padding: 0px 20px;
+  font-size: 16px;
+  line-height: 40px;
+  color: #777777;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  outline: none;
+  font-family: "JosephinSansRegular";
+  margin-bottom: 5px;
+  margin-left: 15px;
+}
+
+
+label {
+
+  color: #3bc8e7;
+  font-family: "JosephinSansRegular";
+  margin: 10px;
+}
+
+.delete-profile-button, .events-button {
+
+  position: absolute;
+  right: 20px;
+  top: 35px;
+  width: 100px;
+  height: 42px;
+  border-radius: 15px;
+  background-color: #3bc8e7;
+  border: none;
+  color: #ffffff;
+  font-family: "JosephinSansRegular";
+  font-size: 15px;
+  font-weight: 400;
+  margin-right: 20px;
+  outline: none;
+  cursor: pointer;
+}
+
+.events-button {
+
+  right: 135px;
+  top: 35px;
+}
+.account-deletion-confirmation-component {
+
+  width: 0;
+  height: 0;
+  opacity: 0;
+  position: absolute;
+}
+
+.favourite-genres-block {
+
+  height: 150px;
+  width: 100%;
+  display: flex;
+  margin-bottom: 20px;
+}
+.favourite-genres-text {
+
+  font-size: 16px;
+  color: #3bc8e7;
+  font-weight: 400;
+  margin-bottom: 30px;
+  font-family: "JosephinSansRegular";
+}
+
+.favourite-genres-block-genres-block {
+
+  width: 420px;
+}
+
+.select-genres {
+
+  border-radius: 7px;
+  outline: none;
+  padding-left: 10px;
+  color: #3bc8e7;
+  background-color: #1b2039;
+  width: 220px;
+  height: 45px;
+}
+
+.favourite-genres-block-selected-genres {
+
+  overflow-y: scroll;
+  width: 90%;
+  height: 93px;
+  box-shadow: inset 1px 1px 2px 2px rgba(0,0,0,0.3);
+  border-radius: 19px;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 12px;
+  padding-top: 2px;
+}
+
+.no-events-yet-text {
+
+  color: white;
+  font-family: JosephinSansRegular;
+
+}
+
+.favourite-genres-block-selected-genres::-webkit-scrollbar {
+  width: 6px;
+  background-color: #F5F5F5;
+  margin-left: 5px;
+}
+
+.favourite-genres-block-selected-genres::-webkit-scrollbar-thumb {
+  background-color: #3bc8e7;
+  margin-left: 5px;
+}
+
+.favourite-genres-block-selected-genres::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #1b2039;
+  margin-left: 5px;
+}
+
+.validation-error-text {
+
+  position: absolute;
+  color: white;
+  font-family: JosephinSansRegular;
+}
+
+.validation-email-error-text {
+
+  top: 30.5%;
+  left: 21%;
+}
+
+.validation-password-error-text {
+
+  top: 41%;
+  left: 23%;
+}
+
+.validation-confirmation-password-error-text {
+
+  top: 51%;
+  left: 33%;
+}
+
+.validation-comments-error-text {
+
+  left: 52%;
+}
+
+.validation-error-text {
+
+  position: absolute;
+  color: white;
+  font-family: JosephinSansRegular;
+}
+
+.new-event-form input {
+
+  margin-bottom: 17px;
+}
+
+.validation-event-title-error-text {
+
+  top: 33%;
+}
+
+.validation-event-location-error-text {
+
+  top: 43%;
+  font-size: 14px;
+
+}
+
+.validation-event-time-error-time {
+
+  top: 51%;
+  font-size: 13px;
+}
+
+.validation-event-text-error-text {
+
+  top: 58.5%;
+  font-size: 14px;
+}

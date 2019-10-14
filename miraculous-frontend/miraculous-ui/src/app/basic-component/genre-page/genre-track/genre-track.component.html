@@ -1,0 +1,22 @@
+<div class="track-block">
+  <figure class="track-cover" [ngStyle]="{'background-image': 'url(' + imagesPath  + genreTrack.coverPictureUrlName+')'}"></figure>
+  <div class="track-info">
+    <a class="track-info-item title" [href]="trackPagePath + genreTrack.id">{{genreTrack.title}}</a>
+    <a class="track-info-item artist" [href]="artistPagePath + genreTrack.artistId">{{genreTrack.artistLogin}}</a>
+    <p class="track-info-item">{{genreTrack.genres}}</p>
+  </div>
+  <p class="track-duration">{{genreTrack.duration}}</p>
+  <i class="fa fa-heart" (click)="putLike()" [ngClass]="{'track-liked-by-current-visitor': genreTrack.likedByCurrentVisitor}"></i>
+  <p class="number-of-likes">{{genreTrack.numberOfLikes}}</p>
+  <a download [href]="songsPath + genreTrack.audioUrlName"><i class="fa fa-download" title="Download Full or Preview Version"></i></a>
+  <i class="fa fa-plus" title="Add To Queue" (click)="addTrackToQueue()"></i>
+  <div (click)="playOrPauseTrack()" class="play-control">
+    <i class="fa fa-play" #playIcon></i>
+    <i class="fa fa-pause" #pauseIcon></i>
+  </div>
+  <audio (ended)="setPlayIcon()" #track [src]="songsPath + genreTrack.audioUrlName"></audio>
+  <p class="free-track-text" *ngIf="genreTrack.isFree">Free</p>
+  <i class="fa fa-cart-plus" *ngIf="!genreTrack.isFree" (click)="addTrackToCart()" [ngClass]="{'track-in-cart-of-visitor':genreTrack.inCartOfCurrentVisitor}"></i>
+</div>
+
+

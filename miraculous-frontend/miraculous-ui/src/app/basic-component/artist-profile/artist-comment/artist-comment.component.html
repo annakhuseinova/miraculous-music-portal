@@ -1,0 +1,11 @@
+<figure class="artist-page-comment">
+  <div class="artist-page-comment-author-data">
+    <div class="artist-page-comment-author-image" [ngStyle]="{'background-image': 'url(' + imagesPath  + comment.commentAuthorPictureUrlName+')'}"></div>
+    <div class="artist-page-comment-author-and-date-block">
+      <p class="artist-page-comment-author-name">{{comment.authorLogin}}</p>
+      <p class="artist-page-comment-date">{{comment.dateOfComment}}</p>
+    </div>
+  </div>
+  <p class="artist-page-comment-content">{{comment.text}}</p>
+  <i (click)="deleteComment()" class="fa fa-times" *ngIf="comment.authorId == tokenService.getVisitorId(this.tokenService.isRememberMeModeOn())"></i>
+</figure>

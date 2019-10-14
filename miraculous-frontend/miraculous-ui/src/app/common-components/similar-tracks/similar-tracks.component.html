@@ -1,0 +1,19 @@
+<h5 class="featured-albums-signature">Similar Tracks</h5>
+<div class="container">
+  <div ng2-carouselamos class="slide-wrapper"
+       [items]="similarTracks" [width]="1000" [$prev]="prev" [$next]="next" [$item]="item" >
+  </div>
+  <ng-template #prev>
+    <img src="assets/icons/left-arrow.svg" class="left-arrow">
+  </ng-template>
+  <ng-template #next>
+    <img src="assets/icons/right-arrow.svg" class="right-arrow">
+  </ng-template>
+  <ng-template #item let-item let-i="index">
+    <div class="items">
+      <a [href]="trackPagePath + item.id"><img [src]="imagesPath + item.coverPictureUrlName" style="margin-right: 30px" class="featured-track-picture"></a>
+      <a class="artist-name" [href]="artistPagePath + item.artistId">{{item.artistLogin}}</a>
+      <a class="track-name" [href]="trackPagePath + item.id">{{item.title}}</a>
+    </div>
+  </ng-template>
+</div>

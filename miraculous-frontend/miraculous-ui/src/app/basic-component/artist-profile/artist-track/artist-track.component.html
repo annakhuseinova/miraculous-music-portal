@@ -1,0 +1,22 @@
+<figure class="track-block">
+  <div class="play-control" (click)="playOrPauseTrack()">
+    <i  class="fa fa-play" #playIcon *ngIf="!isPlaying"></i>
+    <i  class="fa fa-pause" #pauseIcon *ngIf="isPlaying"></i>
+  </div>
+  <audio class="audiotrack" [src]="trackAudioUrl + track.audioUrlName" #audio (ended)="endTrack()"></audio>
+  <figure  class="track-cover" [ngStyle]="{'background-image': 'url(' + imagesPath  + track.coverPictureUrlName+')'}">
+  </figure>
+  <figure class="track-title-and-release-date-block">
+    <a type="button" class="track-title" [href]="trackPageUrl + track.id">{{track.title}}</a>
+    <p class="track-release-date">Released: {{track.dateOfRelease}}</p>
+  </figure>
+  <i class="fa fa-heart" [ngClass]="{'track-is-liked-by-current-user': track.likedByCurrentVisitor}" (click)="putLike()"></i>
+  <p class="number-of-likes">{{track.numberOfLikes}}</p>
+  <p class="track-duration">{{track.duration}}</p>
+  <i class="fa fa-shopping-cart" [ngClass]="{'track-is-in-cart-of-current-visitor': track.inCartOfCurrentVisitor}" title="Add To Cart" *ngIf="track.isFree != true" (click)="addToCart()"></i>
+  <a type="button" download [href]="trackAudioUrl + track.audioUrlName"><i class="fa fa-arrow-circle-down"></i></a>
+  <i class="fa fa-plus" (click)="addTrackToQueue()"></i>
+  <p class="is-free-text" *ngIf="track.isFree == true">Free</p>
+</figure>
+
+

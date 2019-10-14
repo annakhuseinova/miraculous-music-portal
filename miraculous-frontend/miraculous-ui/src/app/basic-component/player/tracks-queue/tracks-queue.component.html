@@ -1,0 +1,13 @@
+<figure class="queue-panel-block">
+  <h5 class="queue-heading">Queue</h5>
+  <div class="queue-contents">
+    <p *ngIf="this.playerService.playableTracks.length == 0" class="no-tracks-in-queue-text">There are no tracks in the queue yet</p>
+    <app-tracks-queue-item (onPauseTrack)="pauseTrack()" [indexOfTrackInPlayer]="i" style="height: 100px" [track]="track" *ngFor="let track of playerService.playableTracks; let i=index" (onClickedDeleteTracksQueueItem)="deleteTrackQueueItem($event)" (onPlayTrack)="playTrack($event)"></app-tracks-queue-item>
+  </div>
+  <div class="queue-buttons-group">
+    <button class="save-queue-button" (click)="saveOrUpdateCurrentPlaylist()">Save</button>
+    <p *ngIf="isQueueSaved" class="queue-saved-text"><i class="fa fa-check"></i>Saved</p>
+  </div>
+  <a type="button" class="close-queue-panel-block" (click)="closeTracksQueuePanel()"></a>
+</figure>
+

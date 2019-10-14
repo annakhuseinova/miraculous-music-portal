@@ -1,0 +1,86 @@
+.featured-albums-signature {
+
+  color: #3bc8e7;
+  font-family: "JosephinSansSemiBold";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 50px;
+  margin-left: 48px;
+  position: relative;
+  margin-top: 20px;
+}
+
+.featured-albums-signature:after {
+
+  content: " ";
+  position: absolute;
+  background-image: url("../../../assets/images/blue-divider.png");
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 2px;
+  bottom: 0;
+  left: -15px;
+}
+
+.container {
+
+  margin-bottom: 70px;
+
+}
+
+.featured-album-picture {
+
+  width: 333px;
+  height: 333px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.left-arrow, .right-arrow {
+
+  outline: none;
+  cursor: pointer;
+}
+
+.left-arrow {
+
+  margin-left: -50px;
+}
+
+.right-arrow {
+
+  margin-right: -50px;
+}
+
+.artist-name, .album-name {
+
+  font-family: JosephinSansBold;
+  color: #ffffff;
+}
+
+.album-name {
+
+  font-family: JosephinSansRegular;
+  margin: 5px 0 0 0;
+  text-decoration: none;
+  display: flex;
+}
+
+.artist-name {
+
+  margin: 0;
+  margin-top: 5px;
+  text-decoration: none;
+  display: flex;
+}
+
+.artist-name:hover, .album-name:hover {
+
+  color: #3bc8e7;
+}
+
+.ng2-carouselamos-wrapper, .ng2-carouselamos-container {
+
+  width: 1200px;
+}
+

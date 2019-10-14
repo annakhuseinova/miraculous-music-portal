@@ -1,0 +1,40 @@
+
+@import "../node_modules/font-awesome/css/font-awesome.css";
+
+@font-face {
+
+  font-family: JosephinSansRegular;
+  src: url(assets/fonts/JosefinSans-Regular.ttf);
+}
+
+@font-face {
+
+  font-family: JosephinSansThin;
+  src: url(assets/fonts/JosefinSans-Thin.ttf);
+}
+
+@font-face {
+
+  font-family: JosephinSansBold;
+  src: url(assets/fonts/JosefinSans-Bold.ttf);
+}
+
+@font-face {
+
+  font-family: JosephinSansSemiBold;
+  src: url(assets/fonts/JosefinSans-SemiBold.ttf);
+}
+
+body, html {
+
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+
+html {
+
+  background-color: #14182a;
+}

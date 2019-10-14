@@ -1,0 +1,25 @@
+<div style="position: relative">
+  <h2 class="purchased-music-greeting">Hi, {{tokenService.getLogin(tokenService.isRememberMeModeOn())}} !</h2>
+  <div class="no-music-in-purchased-music-block" *ngIf="purchasedAlbumTracks.length == 0 && purchasedSingleTracks.length == 0">
+    <p class="purchased-music-is-empty-text">You have made no orders yet</p>
+    <button (click)="goToDiscoverPage()">Continue listening to music</button>
+  </div>
+</div>
+<div style="display: flex" *ngIf="purchasedAlbumTracks.length != 0 || purchasedSingleTracks.length != 0">
+  <div class="purchased-single-tracks">
+    <p class="purchased-tracks-text">Purchased Tracks</p>
+    <button class="delete-all-single-tracks-button" *ngIf="purchasedSingleTracks.length !=0" (click)="deleteAllSingleTracksFromPurchased()">Delete All Purchased Single Tracks</button>
+    <p *ngIf="purchasedSingleTracks.length == 0" class="no-single-tracks-purchased-yet">You've purchased no tracks yet</p>
+    <div class="purchased-single-tracks-scrolled-area">
+      <purchased-track (onSingleTrackFromPurchasedDeletion)="getPurchasedSingleTracks()" *ngFor="let track of purchasedSingleTracks" [purchasedSingleTrack]="track"></purchased-track>
+    </div>
+  </div>
+  <div class="purchased-album-tracks">
+    <p class="purchased-album-tracks-text">Purchased Album Tracks</p>
+    <button (click)="deleteAllAlbumTracksFromPurchased()" class="delete-all-album-tracks" *ngIf="purchasedAlbumTracks.length !=0">Delete All Album Tracks</button>
+    <p class="no-album-tracks-purchased-yet" *ngIf="purchasedAlbumTracks.length == 0">You've purchased no albums yet...</p>
+    <div class="purchased-album-tracks-scrolled-area">
+      <purchased-album-track (onAlbumTrackFromPurchasedDeletion)="getPurchasedAlbumTracks()" *ngFor="let albumTrack of purchasedAlbumTracks" [purchasedAlbumTrack]="albumTrack"></purchased-album-track>
+    </div>
+  </div>
+</div>

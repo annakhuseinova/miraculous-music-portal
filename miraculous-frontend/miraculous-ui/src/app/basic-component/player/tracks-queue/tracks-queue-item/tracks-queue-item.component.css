@@ -1,0 +1,122 @@
+.queue-track-item, .queue-track-item-current {
+
+  width: 310px;
+  height: 60px;
+  border-radius: 10px;
+  position: relative;
+  background-color: #252b4d;
+  margin: 10px 0 0 0;
+
+}
+
+.queue-track-item-current {
+
+  background-color: #3bc8e7;
+}
+
+.queue-track-item-cover {
+
+  height: 58px;
+  padding-top: 2px;
+  width: 60px;
+  background-color: lightgrey;
+  border-radius: 10px;
+  margin: 0 0 0 5px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  position: relative;
+
+}
+
+.hovered-track-item-play-cover-block,.hovered-track-item-pause-cover-block {
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 58px;
+  width: 60px;
+  display: none;
+  z-index: 10000;
+  background-color: #1b2039;
+  margin: 0;
+  border-radius: 10px;
+  opacity: 0.7;
+  background-image: url("~src/assets/icons/play-track-in-queue.png");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 40px 40px;
+
+}
+
+.hovered-track-item-pause-cover-block {
+
+  background-image: url("~src/assets/images/pause-button.png");
+}
+
+.queue-track-item-cover:hover .hovered-track-item-play-cover-block{
+
+  display: block;
+}
+
+.queue-track-item-cover:hover .hovered-track-item-pause-cover-block {
+
+  display: block;
+}
+
+.queue-track-info {
+
+  font-family: "JosephinSansRegular";
+  margin: 0 0 0 75px;
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+
+.queue-track-info-title {
+
+  font-family: "JosephinSansBold";
+}
+
+.queue-track-info p {
+
+  width: 160px;
+
+}
+
+.queue-track-info-title {
+
+  margin: 5px 0 0 0;
+  overflow: hidden;
+}
+
+.queue-track-info-artist {
+
+  margin: 5px 0 0 0;
+  overflow: hidden;
+}
+
+.delete-queue-track-button {
+
+  position: absolute;
+  content: "";
+  background-image: url(~src/assets/images/close-icon.png);
+  background-size: 17px 17px;
+  background-repeat: no-repeat;
+  height: 17px;
+  width: 17px;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+
+}
+.queue-track-info-album {
+
+  margin: 0;
+  width: 190px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

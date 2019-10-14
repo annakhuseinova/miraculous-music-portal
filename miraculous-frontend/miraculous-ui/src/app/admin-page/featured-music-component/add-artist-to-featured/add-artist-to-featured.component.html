@@ -1,0 +1,19 @@
+<div>
+  <p class="add-music-to-featured-signature">Add Artists to Featured:</p>
+  <div class="add-artists-to-featured-block">
+    <label for="artist-login-input-for-featured-artist" class="add-to-featured-music-label">Find artist to add to featured: </label>
+    <input type="text" placeholder="Enter artist's name"  [(ngModel)]="artistToBeAddedToFeatured.login" id="artist-login-input-for-featured-artist" class="artist-login-input-for-featured-artist">
+    <button class="find-artist-to-add-to-featured-button" (click)="getArtistByArtistLogin()">Find</button>
+  </div>
+  <figure class="artist-successfully-found-block" *ngIf="isArtistToBeAddedToFeaturedFound">
+    <p style="margin-left: 20px; margin-right: 30px">Found: {{artistLogin}}</p>
+    <button class="add-artist-to-featured-button" (click)="addArtistToFeaturedByArtistId(artistToBeAddedToFeatured.id)">Add to Featured</button>
+    <i class="fa fa-times successfully-found" (click)="closeArtistFoundMessage()"></i>
+  </figure>
+  <figure class="artist-not-found" *ngIf="isArtistToBeAddedToFeaturedNotFound">{{artistNotFoundMessage}}
+    <i class="fa fa-times not-found" (click)="closeArtistNotFoundMessage()"></i></figure>
+  <figure class="successfully-added-artist-to-featured-message" *ngIf="hasArtistBeenAddedToFeatured">Successfully added {{artistLogin}} to featured!
+    <i class="fa fa-times successfully-added" (click)="closeSuccessfullyAddedArtistToFeaturedMessage()"></i></figure>
+  <figure class="failed-to-add-artist-to-featured-message" *ngIf="hasArtistFailedToBeAddedToFeatured">{{artistNotAddedToFeaturedMessage}}
+   <i class="fa fa-times failed-to-add" (click)="closeFailedToAddArtistMessage()"></i></figure>
+</div>

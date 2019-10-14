@@ -1,0 +1,18 @@
+<div class="track-block">
+  <figure class="track-cover" [ngStyle]="{'background-image': 'url(' + imagesPath  + freeTrack.coverPictureUrlName+')'}"></figure>
+  <div class="track-info">
+    <a [href]="trackPageUrl + freeTrack.id" class="track-info-item title">{{freeTrack.title}}</a>
+    <a [href]="artistPageUrl + freeTrack.artistId" class="track-info-item artist">{{freeTrack.artistLogin}}</a>
+    <p class="track-info-item">{{freeTrack.genres}}</p>
+  </div>
+  <p class="track-duration">{{freeTrack.duration}}</p>
+  <i class="fa fa-heart" (click)="putLike()" [ngClass]="{'track-liked-by-current-visitor': freeTrack.likedByCurrentVisitor}"></i>
+  <p class="number-of-likes">{{freeTrack.numberOfLikes}}</p>
+  <a [href]="songsUrl + freeTrack.audioUrlName" download><i class="fa fa-download"></i></a>
+  <i class="fa fa-plus" (click)="addTrackToQueue()"></i>
+  <div class="play-control" (click)="playOrPauseTrack()">
+    <i  class="fa fa-play" #playIcon></i>
+    <i  class="fa fa-pause" #pauseIcon></i>
+  </div>
+  <audio #track (ended)="setPlayIcon()" [src]="songsUrl + freeTrack.audioUrlName"></audio>
+</div>

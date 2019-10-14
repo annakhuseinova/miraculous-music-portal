@@ -1,0 +1,14 @@
+<div class="album-block">
+  <figure class="album-cover" [ngStyle]="{'background-image': 'url(' + imagesPath  + genreAlbum.albumCoverPictureUrlName+')'}"></figure>
+  <div class="track-info">
+    <a class="album-info-item title" [href]="albumPageUrl + genreAlbum.id">{{genreAlbum.title}}</a>
+    <a class="album-info-item artist" [href]="artistPageUrl + genreAlbum.artistId">{{genreAlbum.artistLogin}}</a>
+    <p class="album-info-item">{{genreAlbum.genres}}</p>
+  </div>
+  <p class="number-of-tracks">Tracks: {{genreAlbum.numberOfTracks}}</p>
+  <p class="heart"><i class="fa fa-heart" (click)="putLike()" [ngClass]="{'album-liked-by-current-visitor':genreAlbum.likedByCurrentVisitor}"></i></p>
+  <p class="number-of-likes">{{genreAlbum.numberOfLikes}}</p>
+  <p class="free-album-text" *ngIf="genreAlbum.isFree">Free</p>
+  <i class="fa fa-cart-plus" *ngIf="!genreAlbum.isFree" (click)="addAlbumToCart()" [ngClass]="{'album-is-in-visitor-cart': genreAlbum.inCartOfCurrentVisitor}"></i>
+</div>
+

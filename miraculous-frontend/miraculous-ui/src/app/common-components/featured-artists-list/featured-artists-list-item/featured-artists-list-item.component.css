@@ -1,0 +1,32 @@
+.featured-artist-item {
+
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.featured-artist-cover-picture {
+
+  margin: 0;
+  width: 180px;
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  background-color: grey;
+  display: flex;
+}
+
+.featured-artist-name {
+
+  margin: 8px 0 0 5%;
+  font-family: JosephinSansBold;
+  color: white;
+  display: flex;
+  text-decoration: none;
+}
+
+.featured-artist-name:hover {
+
+  color: #3bc8e7;
+}

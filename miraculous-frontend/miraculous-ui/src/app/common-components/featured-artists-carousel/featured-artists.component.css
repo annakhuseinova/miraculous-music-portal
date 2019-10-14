@@ -1,0 +1,98 @@
+.featured-artists-signature {
+
+  color: #3bc8e7;
+  font-family: "JosephinSansSemiBold";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 50px;
+  margin-left: 48px;
+  position: relative;
+  margin-top: 20px;
+}
+
+.featured-artists-signature:after {
+
+  content: " ";
+  position: absolute;
+  background-image: url("../../../assets/images/blue-divider.png");
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 2px;
+  bottom: 0;
+  left: -15px;
+}
+
+.featured-artist-picture {
+
+  width: 333px;
+  border-radius: 5px;
+  height: 333px;
+  margin-right: 30px;
+  object-fit: cover;
+}
+
+.left-arrow, .right-arrow {
+
+  outline: none;
+  cursor: pointer;
+}
+
+.left-arrow {
+  margin-left: -50px;
+}
+
+.right-arrow {
+
+  margin-right: -50px;
+}
+
+.artist-name {
+
+  font-family: JosephinSansBold;
+  color: #ffffff;
+}
+
+.fa-heart {
+
+  width: 40px;
+  height: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+.fa-heart:hover {
+
+  color:  #3bc8e7;
+}
+
+.artist-name-link {
+
+  color: #3bc8e7;
+  text-decoration: none;
+}
+
+.artist-name-link:hover {
+
+  color: white;
+}
+
+.items {
+
+  position: relative;
+}
+
+.fa-heart {
+
+  color: #3bc8e7;
+  position: absolute;
+  right: 64px;
+  bottom: -6px;
+}
+.number-of-likes {
+
+  position: absolute;
+  right: 68px;
+  color: #3bc8e7;
+  font-family: JosephinSansRegular;
+  bottom: 0;
+}

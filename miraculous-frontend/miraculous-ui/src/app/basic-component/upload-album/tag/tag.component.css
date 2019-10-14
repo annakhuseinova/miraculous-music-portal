@@ -1,0 +1,39 @@
+.genre-tag {
+
+  display: flex;
+  min-width: 50px;
+  height: 30px;
+  background-color: #1b2039;
+  border-radius: 6px;
+  border: 1px solid #3bc8e7;
+  justify-content: center;
+  align-items: center;
+  font-family: "JosephinSansBold";
+  color: #3bc8e7;
+  margin: 10px 10px 0 0;
+  padding-right: 14px;
+  padding-left: 3px;
+  position: relative;
+
+}
+
+.genre-tag-remove-tag-button {
+
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  color: white;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  align-items: center;
+  font-size: 11px;
+  width: 10px;
+  height: 10px;
+  background-image: url(~src/assets/images/cancel.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}

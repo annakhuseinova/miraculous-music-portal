@@ -1,0 +1,13 @@
+<figure class="queue-track-item" [ngClass]="playerService.currentTrackIndex == this.indexOfTrackInPlayer ? 'queue-track-item-current':'queue-track-item'">
+  <figure class="queue-track-item-cover" [ngStyle]= "{'background-image': 'url('+imageUrl+ track.coverPictureUrlName+')'}" (click)="playOrPauseIfIsPlaying()">
+    <figure class="hovered-track-item-play-cover-block" *ngIf="!isPlaying"></figure>
+    <figure class="hovered-track-item-pause-cover-block" *ngIf="isPlaying"></figure>
+    <figure class="queue-track-info">
+      <p class="queue-track-info-title">{{track?.title}}</p>
+      <p class="queue-track-info-artist">{{track?.artistLogin}}</p>
+      <p class="queue-track-info-album">Album: {{albumTitle}}</p>
+    </figure>
+  </figure>
+  <a type="button" class="delete-queue-track-button" (click)="deleteTracksQueueItem(track)"></a>
+  <audio [src]="trackUrl + track.audioUrlName"></audio>
+</figure>

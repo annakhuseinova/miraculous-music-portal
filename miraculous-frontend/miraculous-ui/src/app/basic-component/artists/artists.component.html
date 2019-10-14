@@ -1,0 +1,19 @@
+<featured-artists-carousel></featured-artists-carousel>
+<div class="genre-artists-block">
+  <div>
+    <p class="genre-artists-section-heading">10 Pop Artists</p>
+    <genre-artist *ngFor="let artist of popArtists" [genreArtist]="artist"></genre-artist>
+  </div>
+  <div>
+    <p class="genre-artists-section-heading">10 Trance Artists</p>
+    <genre-artist *ngFor="let artist of tranceArtists" [genreArtist]="artist"></genre-artist>
+  </div>
+  <div>
+    <p class="genre-artists-section-heading">10 Rock Artists</p>
+    <genre-artist *ngFor="let artist of rockArtists" [genreArtist]="artist"></genre-artist>
+  </div>
+  <div>
+    <p class="genre-artists-section-heading">10 Rap Artists</p>
+    <genre-artist *ngFor="let artist of rapArtists" [genreArtist]="artist"></genre-artist>
+  </div>
+</div>

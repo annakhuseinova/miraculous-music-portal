@@ -1,0 +1,13 @@
+.album-item {
+
+  margin: 0 0 0 20px;
+  padding-bottom: 10px;
+}
+
+.add-to-featured-albums-button {
+
+  font-family: JosephinSansRegular;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}

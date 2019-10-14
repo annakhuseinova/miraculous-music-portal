@@ -1,0 +1,47 @@
+<div class="edit-profile-form">
+  <account-deletion-confirmation (onDeleteArtistButtonClicked)="completeDeletion()" #accountDeletionConfirmationComponent class="account-deletion-confirmation-component" (onClosedAccountDeletion)="closeAccountDeletionBlock()"></account-deletion-confirmation>
+  <h1 class="edit-profile-signature" (click)="getUserFavouriteGenres()">Edit Profile</h1>
+  <button (click)="deleteUserPhoto()" class="delete-user-photo-button" *ngIf="userSettingsDto.coverPictureUrlName != null && userSettingsDto.coverPictureUrlName.length != 0">Delete Photo</button>
+  <div class="user-profile-picture" #userProfilePicture [ngStyle]="{'background-image': 'url(' + imagesPath  + userSettingsDto.coverPictureUrlName+')'}">
+    <div class="user-profile-picture-update-picture-block">
+      <label class="user-profile-picture-update-picture-button" for="user-photo">Update Picture</label>
+      <input type="file" name="user-photo" class="user-photo" id="user-photo" accept=".jpg,.png,.svg" #userPhotoInput (change)="changeUserPicture()">
+    </div>
+    <i class="fa fa-times" *ngIf="isUserCoverPictureChosen" (click)="removeCoverPicture()"></i>
+  </div>
+  <div class="group-of-inputs">
+    <div class="favourite-genres-block">
+      <div class="favourite-genres-block-genres-block">
+        <p class="favourite-genres-text">Favourite genres:</p>
+        <div class="favourite-genres-block-selected-genres" #favouriteGenres>
+          <ng-template #favouriteGenresVsf></ng-template>
+        </div>
+      </div>
+      <div>
+        <p class="favourite-genres-text">Add New Genres</p>
+        <select class="select-genres" (change)="addTagToSelectedGenres()" #selectFavouriteGenres>
+          <option *ngFor="let genre of allGenres" [id]="genre.id">{{genre.title}}</option>
+        </select>
+      </div>
+    </div>
+    <label for="user-email-input">Change Email</label>
+    <p class="validation-email-error-text validation-error-message">{{userSettingsValidationError?.email}}</p>
+    <input [(ngModel)]="userSettingsDto.email" type="email" name="user-email-input" id="user-email-input">
+    <label for="user-password-input">Change Password</label>
+    <p class="validation-password-error-text validation-error-message">{{userSettingsValidationError?.password}}</p>
+    <input [(ngModel)]="userSettingsDto.password" placeholder="Enter new password. It must contain at least 6 symbols" type="password" name="new-password-input" id="user-password-input">
+    <label for="user-confirm-password-input">Confirm Password Change</label>
+    <p class="validation-confirmation-password-error-text validation-error-message">{{userSettingsValidationError?.confirmationPassword}}</p>
+    <input [(ngModel)]="userSettingsDto.confirmationPassword" placeholder="Please, repeat your password" type="password" name="new-password-confirm-input" id="user-confirm-password-input">
+    <label for="user-location-input">Change Location</label>
+    <input [(ngModel)]="userSettingsDto.location" type="text" name="new-password-confirm-input" id="user-location-input">
+    <label for="user-description">Change Description</label>
+    <textarea [(ngModel)]="userSettingsDto.description" class="user-profile-description-textarea" id="user-description"></textarea>
+  </div>
+  <div class="form-buttons-group">
+    <button (click)="updateUserSettings()" class="form-submit-button">Save Changes</button>
+    <button class="cancel-form-button" (click)="navigate('artists/'+ tokenStorageService.getVisitorId(tokenStorageService.isRememberMeModeOn()))">Cancel</button>
+  </div>
+  <button class="delete-profile-button" (click)="showAccountDeletionBlock()">Delete My Account</button>
+</div>
+

@@ -1,0 +1,253 @@
+.audiotrack {
+
+  width: 750px;
+  height: 61px;
+  display: flex;
+  position: relative;
+  background-color: #14182a;
+  align-items: center;
+  padding-top: 8px;
+
+}
+
+.audiotrack-sound {
+
+  display: none;
+}
+
+.audiotrack:after {
+
+  content: " ";
+  position: absolute;
+  background-image: url(~src/assets/images/underlining.png);
+  width: 750px;
+  height: 2px;
+  top: 83px;
+
+}
+
+.audiotrack-number {
+
+  width: 40px;
+  height: 40px;
+  margin-left: 15px;
+  text-shadow: 0 0 10px rgba(4, 4, 4, 0.2);
+  color: #2f375d;
+  font-family: "JosephinSansBold";
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: -30px;
+
+}
+
+.audiotrack-picture {
+
+  width: 200px;
+  height: 80px;
+  background-color: #14182a;
+  border-radius: 5px;
+  margin-left: 71px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 30px;
+  border: 1px solid white;
+}
+.audiotrack-picture:hover {
+
+  background-image: url(~src/assets/images/giphy.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+}
+.album-page-link:hover {
+
+  color: #3bc8e7;
+}
+
+.album-page-link {
+
+  text-decoration: none;
+  color: white;
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+}
+
+
+.audiotrack-information {
+
+  margin: 0 0 0 19px;
+  font-family: "JosephinSansRegular";
+  width: 200px;
+  font-size: 13px;
+  color: #ffffff;
+}
+
+.audiotrack-title {
+
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  color: white;
+  width: 100%;
+  margin: 0;
+
+}
+
+.audiotrack-title:hover, .audiotrack-author:hover {
+
+  color: #3bc8e7;
+}
+
+.audiotrack-author {
+
+  width: 100%;
+  margin: 5px 0 0 0;
+  display: block;
+  color: white;
+  text-decoration: none;
+}
+
+.audiotrack-length {
+
+  color: #ffffff;
+  font-family: "JosephinSansRegular";
+  font-size: 14px;
+  font-weight: 400;
+
+}
+
+.audiotrack-more-options-button {
+
+  margin-left: 30px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.fa-heart, .fa-shopping-cart, .fa-ellipsis-h {
+
+  width: 40px;
+  height: 40px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.fa-shopping-cart {
+
+  margin-left: 25px;
+}
+
+.fa-ellipsis-h {
+
+  margin-left: 30px;
+}
+
+.fa-heart {
+
+  margin-right: 10px;
+}
+
+.fa-heart:hover, .fa-shopping-cart:hover {
+
+  color: #3bc8e7;
+}
+
+.number-of-likes {
+
+  font-family: JosephinSansRegular;
+  color: white;
+  position: absolute;
+  top: 13px;
+  right: 105px;
+}
+
+.fa-ellipsis-h:hover {
+
+  color: #3bc8e7;
+}
+
+.track-options-list {
+
+  width: 65px;
+  height: 95px;
+  list-style-type: none;
+  padding-right: 20px;
+  line-height: 1;
+  border-radius: 6px;
+  background-color: #fff;
+  border: 1px solid black;
+  padding-top: 20px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -105px;
+  right: 20px;
+  flex-direction: column;
+}
+
+.track-options-list li {
+
+  padding: 5px 0;
+  color: #222;
+  font-family: "JosephinSansBold";
+  margin-bottom: 18px;
+  position: relative;
+}
+
+.track-options-list a {
+
+  text-decoration: none;
+  color: #222;
+  cursor: pointer;
+}
+
+.track-options-list a:hover {
+
+  color: #3bc8e7;
+}
+
+.fa-ellipsis-h:hover  .track-options-list {
+
+  display: flex;
+}
+
+.fa-plus {
+
+  position: absolute;
+  left: 18px;
+  top: 17px;
+}
+
+.fa-download {
+
+  position: absolute;
+  top: 72px;
+  left: 14px;
+}
+
+.price {
+
+  position: absolute;
+  color: #3bc8e7;
+  right: 165px;
+  top: 13px;
+  font-family: JosephinSansRegular;
+}
+
+.track-in-cart, .track-liked-by-current-user {
+
+  color: #3bc8e7;
+}

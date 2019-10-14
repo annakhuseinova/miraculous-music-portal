@@ -1,0 +1,10 @@
+<div class="cart-track-block">
+  <figure class="track-cover" [ngStyle]="{'background-image': 'url(' + imagesPath  + cartTrack.coverPictureUrlName+')'}"></figure>
+  <div class="track-info-block">
+    <p class="track-info-item">{{cartTrack.title}}</p>
+    <p class="track-info-item">{{cartTrack.artistLogin}}</p>
+    <p class="track-info-item">{{cartTrack.genres}}</p>
+  </div>
+  <p class="track-price">{{cartTrack.price}}$</p>
+  <button class="delete-from-cart-button" (click)="deleteTrackFromCart()">Delete From Cart</button>
+</div>

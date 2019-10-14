@@ -1,0 +1,84 @@
+<div class="edit-profile-form">
+  <account-deletion-confirmation (onDeleteArtistButtonClicked)="completeDeletion()" #accountDeletionConfirmationComponent class="account-deletion-confirmation-component" (onClosedAccountDeletion)="closeAccountDeletionBlock()"></account-deletion-confirmation>
+  <h1 class="edit-profile-signature">Edit Profile
+    <i class="fa fa-times remove-user-photo" *ngIf="isUserPictureChosen" (click)="removeUserPhoto()"></i></h1>
+  <button (click)="deleteArtistPhoto()" class="delete-artist-photo-button" *ngIf="artistSettingsDto.pictureUrlName != null && artistSettingsDto.pictureUrlName.length != 0">Delete Photo</button>
+  <div class="user-profile-picture" #userProfilePicture [ngStyle]="{'background-image': 'url(' + imagesPath  + artistSettingsDto.pictureUrlName+')'}">
+    <div class="user-profile-picture-update-picture-block">
+      <label class="user-profile-picture-update-picture-button" for="user-photo">Update Picture</label>
+      <input type="file" name="user-photo" class="user-photo" id="user-photo" accept=".jpg,.png,.svg" #userPhotoInput (change)="changeUserPicture()">
+    </div>
+  </div>
+  <div class="group-of-inputs">
+    <p class="validation-comments-error-text validation-error-text">{{artistValidationError?.areCommentsAllowed}}</p>
+    <div class="liked-music-privacy-checkbox-block" >
+      <label for="liked-music-privacy-checkbox" class="liked-music-privacy-checkbox-label">Allow comments on your profile page:
+        <input (change)="artistSettingsDto.areCommentsAllowed = !artistSettingsDto.areCommentsAllowed" [checked]="artistSettingsDto.areCommentsAllowed" type="checkbox" id="liked-music-privacy-checkbox" class="liked-music-privacy-checkbox">
+      </label>
+    </div>
+    <div class="favourite-genres-block">
+      <div class="favourite-genres-block-genres-block">
+        <p class="favourite-genres-text">Genres:</p>
+        <div class="favourite-genres-block-selected-genres" #favouriteGenres>
+          <ng-template #favouriteGenresVsf></ng-template>
+        </div>
+      </div>
+      <div>
+        <p class="favourite-genres-text">Add New Genres</p>
+        <select class="select-genres" (change)="addTagToSelectedGenres()" #selectFavouriteGenres>
+          <option *ngFor="let genre of allGenres" [id]="genre.id">
+            {{genre.title}}</option>
+        </select>
+      </div>
+    </div>
+    <label for="user-email-input">Change Email</label>
+    <p class="validation-email-error-text validation-error-text ">{{artistValidationError?.email}}</p>
+    <input [(ngModel)]="artistSettingsDto.email"  type="email" name="user-email-input" id="user-email-input">
+    <label for="user-password-input">Change Password</label>
+    <p class="validation-password-error-text validation-error-text ">{{artistValidationError?.password}}</p>
+    <input [(ngModel)]="artistSettingsDto.password" placeholder="Enter new password. It must at least contain 6 symbols"  type="password" name="new-password-input" id="user-password-input">
+    <label for="user-confirm-password-input">Confirm Password Change</label>
+    <p class="validation-confirmation-password-error-text validation-error-text ">{{artistValidationError?.confirmationPassword}}</p>
+    <input [(ngModel)]="artistSettingsDto.confirmationPassword" placeholder="Please, repeat your new password" type="password" name="new-password-confirm-input" id="user-confirm-password-input">
+    <label for="artist-location-input">Change Location</label>
+    <input [(ngModel)]="artistSettingsDto.location" type="text" id="artist-location-input">
+    <label for="user-description">Change Description</label>
+    <textarea [(ngModel)]="artistSettingsDto.description" class="user-profile-description-textarea" id="user-description"></textarea>
+  </div>
+  <div class="artist-events">
+    <h6 class="my-events-heading">My Events
+    <i class="fa fa-times remove-event-picture" *ngIf="isEventPictureChosen" (click)="removeEventPicture()"></i></h6>
+    <div style="display: flex; width: 560px">
+      <div class="existing-events-block">
+        <p class="my-events-list-heading">My Events:</p>
+        <div class="list-of-existing-events">
+          <p class="no-events-yet-text" *ngIf="artistEvents.length == 0">There are no events yet... </p>
+          <artist-event (onEventDeletion)="deleteEvent(event.id)" *ngFor="let event of artistEvents" [event]="event" [isEventDeletionAllowed]="true"></artist-event>
+        </div>
+      </div>
+      <div class="new-event-form">
+        <figure class="event-cover-picture" #eventCoverPicture>
+          <div class="event-choose-cover-picture-block">
+            <label  for="choose-event-cover-button" class="choose-event-label">Choose Event Cover</label>
+            <input (change)="changeEventPicture()" #eventCoverPictureInput id="choose-event-cover-button" class="choose-event-cover-button" type="file" accept=".jpg,.png,.svg" style="display: none">
+          </div>
+        </figure>
+        <p class="validation-event-title-error-text validation-error-text">{{eventValidationError?.eventTitle}}</p>
+        <input type="text" placeholder="Event Title" [(ngModel)]="eventToBeAddedToArtist.eventTitle">
+        <p class="validation-event-location-error-text validation-error-text">{{eventValidationError?.eventLocation}}</p>
+        <input type="text" placeholder="Event Location" [(ngModel)]="eventToBeAddedToArtist.eventLocation">
+        <p class="validation-event-time-error-time validation-error-text">{{eventValidationError?.eventTime}}</p>
+        <input type="text" placeholder="Event Date and Time" [(ngModel)]="eventToBeAddedToArtist.eventTime">
+        <p class="validation-event-text-error-text validation-error-text">{{eventValidationError?.eventText}}</p>
+        <textarea placeholder="Add Event Description" [(ngModel)]="eventToBeAddedToArtist.eventText"></textarea>
+        <button (click)="addNewArtistEvent()" class="add-event-button">Add Event</button>
+      </div>
+    </div>
+  </div>
+  <div class="form-buttons-group">
+    <button (click)="updateArtistSettings()" class="form-submit-button">Save Changes</button>
+    <button class="cancel-form-button" (click)="navigate('artists/' + tokenStorageService.getVisitorId(tokenStorageService.isRememberMeModeOn()))">Cancel</button>
+  </div>
+  <button class="delete-profile-button" (click)="showAccountDeletionBlock()">Delete My Account</button>
+</div>
+

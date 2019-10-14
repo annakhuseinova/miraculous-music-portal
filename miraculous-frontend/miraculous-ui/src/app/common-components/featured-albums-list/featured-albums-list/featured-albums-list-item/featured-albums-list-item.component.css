@@ -1,0 +1,50 @@
+.featured-album-item {
+
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.featured-album-cover-picture {
+
+  width: 180px;
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  background-color: grey;
+  margin: 0;
+  display: flex;
+}
+
+.featured-album-artist {
+
+  margin-left: 10px;
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+}
+
+.featured-album-title {
+
+  font-family: JosephinSansBold;
+}
+.featured-album-artist {
+
+  font-family: JosephinSansRegular;
+}
+.featured-album-title, .featured-album-artist {
+
+  margin: 0 0 0 5px;
+  color: white;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-decoration: none;
+}
+
+.featured-album-title:hover, .featured-album-artist:hover {
+
+  color: #3bc8e7;
+}

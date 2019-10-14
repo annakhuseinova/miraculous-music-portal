@@ -1,0 +1,44 @@
+.search-unsuccessful-text {
+
+  color: white;
+  font-family: JosephinSansRegular;
+  font-size: 18px;
+  margin-left: 50px;
+  margin-top: 20px;
+}
+
+.found-results-text {
+
+  color: white;
+  margin-left: 50px;
+  margin-top: 20px;
+  font-family: JosephinSansRegular;
+}
+
+.search-panel-search-form-input {
+
+  width: 385px;
+  height: 38px;
+  border-radius: 5px;
+  padding-left: 20px;
+  outline: none;
+}
+
+.search-panel-search-form {
+
+  margin-left: 50px;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+
+.search-panel-search-form-submit-button {
+
+  border-radius: 5px;
+  background-color: #3bc8e7;
+  width: 45px;
+  height: 45px;
+  border: none;
+  cursor: pointer;
+}

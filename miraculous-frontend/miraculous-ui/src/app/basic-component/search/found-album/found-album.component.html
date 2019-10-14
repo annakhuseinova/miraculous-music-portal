@@ -1,0 +1,11 @@
+<div class="found-album-block">
+  <figure class="found-album-cover" [ngStyle]="{'background-image': 'url(' + imagesPath  + foundAlbum.albumCoverPictureUrlName+')'}"></figure>
+  <div class="found-track-info">
+    <a class="found-album-info-item title" [href]="albumPageUrl + foundAlbum.id">{{foundAlbum.title}}</a>
+    <a class="found-album-info-item artist" [href]="artistPageUrl + foundAlbum.artistId">{{foundAlbum.artistLogin}}</a>
+    <p class="found-album-info-item">{{foundAlbum.genres}}</p>
+  </div>
+  <p class="number-of-tracks">Tracks: {{foundAlbum.numberOfTracks}}</p>
+  <p class="heart"><i class="fa fa-heart"></i></p>
+  <p class="number-of-likes">{{foundAlbum.numberOfLikes}}</p>
+</div>

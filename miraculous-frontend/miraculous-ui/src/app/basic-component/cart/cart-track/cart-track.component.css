@@ -1,0 +1,60 @@
+.cart-track-block {
+
+  display: flex;
+  width: 500px;
+  height: 90px;
+  border-radius: 5px;
+  align-items: center;
+}
+
+
+.track-cover {
+
+  margin-left: 10px;
+  height: 80px;
+  width: 80px;
+  background-color: lightgrey;
+  border-radius: 5px;
+  background-size: cover;
+  background-position: center;
+}
+
+.track-info-block {
+
+  width: 150px;
+
+}
+
+.track-info-item {
+
+  margin: 0;
+  width: 150px;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.track-price {
+
+  width: 50px;
+  margin-right: 10px;
+}
+
+.delete-from-cart-button {
+
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: transparent;
+  cursor: pointer;
+  color: white;
+  font-family: JosephinSansRegular;
+  outline: none;
+  height: 30px;
+
+}
+
+.delete-from-cart-button:hover {
+
+  box-shadow: 0px 0px 20px 0px white;
+}
+

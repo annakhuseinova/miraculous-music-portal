@@ -1,0 +1,21 @@
+<div class="genre-container">
+  <figure class="genre-picture" [ngStyle]="{'background-image': 'url(' + imagesPath  + genre.genrePictureUrlName+')'}">
+    <figure class="genre-title">{{genre.title}}</figure>
+    <p class="genre-description">{{genre.description}}</p>
+  </figure>
+</div>
+<div class="genre-music-block">
+  <div class="top-genre-tracks-block">
+    <p class="top-ten-genre-tracks">Top {{genre.title}} tracks</p>
+    <div>
+      <genre-track *ngFor="let track of top10TracksOfGenre" [genreTrack]="track"></genre-track>
+    </div>
+  </div>
+  <div>
+    <p class="top-ten-genre-albums">Top {{genre.title}} albums</p>
+    <div>
+      <p class="no-albums-of-genre-text" *ngIf="top10AlbumsOfGenre.length == 0">There are not albums of genre {{genre.title}} ...</p>
+      <genre-album *ngFor="let album of top10AlbumsOfGenre" [genreAlbum]="album"></genre-album>
+    </div>
+  </div>
+</div>

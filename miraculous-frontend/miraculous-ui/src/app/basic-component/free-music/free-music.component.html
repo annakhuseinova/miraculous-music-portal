@@ -1,0 +1,16 @@
+<h2 class="free-music-heading">Free Music</h2>
+<div class="free-music-block">
+  <div class="free-tracks-block">
+    <p class="top-free-tracks-heading">Top 10 Free Tracks</p>
+    <div>
+      <free-track *ngFor="let track of freeTop10Tracks" [freeTrack]="track"></free-track>
+    </div>
+  </div>
+  <div class="free-albums-block">
+    <p class="top-free-albums-heading">Top 10 Free Albums</p>
+    <div>
+      <free-album *ngFor="let album of freeTop10Albums" [freeAlbum]="album"></free-album>
+    </div>
+  </div>
+</div>
+

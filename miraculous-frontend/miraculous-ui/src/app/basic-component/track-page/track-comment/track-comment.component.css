@@ -1,0 +1,63 @@
+.album-page-comment {
+
+  width: 310px;
+  margin: 0;
+  position: relative;
+}
+
+.album-page-comment-author-data{
+
+  display: flex;
+}
+
+.fa-times {
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: white;
+  cursor: pointer;
+}
+
+.album-page-comment-author-image {
+
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-size: 60px 60px ;
+  object-fit: cover;
+}
+
+.album-page-comment-author-and-date-block {
+
+  margin-left: 20px;
+}
+
+
+.album-page-comment-author-name {
+
+  margin: 0 10px 0 0;
+  color: #ffffff;
+  font-family: "JosephinSansSemiBold";
+  font-size: 16px;
+  font-weight: 400;
+
+}
+
+.album-page-comment-date {
+
+  color: #ffffff;
+  font-family: "JosephinSansSemiBold";
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.album-page-comment-content {
+
+  color: #dedede;
+  font-family: "JosephinSansRegular";
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 25px;
+}

@@ -1,0 +1,141 @@
+.users-block {
+
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.users-signature {
+
+  color: black;
+  font-family: "JosephinSansBold";
+  font-size: 22px;
+  margin-bottom: 20px;
+  margin-left: 38px;
+}
+
+.fa-users a {
+
+  text-decoration: none;
+}
+
+.ban-user-section {
+
+  display: flex;
+}
+
+.ban-user-label {
+
+  font-family: JosephinSansBold;
+  margin-right: 20px;
+}
+
+.ban-user-login-input {
+
+  outline: none;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+.find-user-to-ban-button {
+
+  outline: none;
+  margin-left: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: JosephinSansBold;
+}
+
+.user-or-artist-found-to-be-banned-section {
+
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  width: 400px;
+  height: 70px;
+  border-radius: 10px;
+  margin-top: 20px;
+  display: flex;
+  font-family: JosephinSansRegular;
+  align-items: center;
+  position: relative;
+}
+
+.user-or-artist-not-found {
+
+  width: 400px;
+  height: 70px;
+  border-radius: 10px;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+}
+
+.login-not-found-signature {
+
+  color: darkred;
+  font-family: JosephinSansBold;
+  margin-left: 20px;
+}
+
+.delete-button {
+
+  cursor: pointer;
+  border-radius: 10px;
+  outline: none;
+  background-color: white;
+  border: 1px solid darkgreen;
+  font-family: JosephinSansBold;
+  color: darkgreen;
+  margin-right: 10px;
+}
+
+.found-signature {
+
+  color: darkgreen;
+  font-family: JosephinSansBold;
+}
+
+.user-or-artist-successfully-deleted-message, .user-or-artist-deletion-failed-message {
+
+  width: 400px;
+  height: 70px;
+  border-radius: 10px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.fa-times {
+
+  position: absolute;
+  top: 2px;
+  right: 5px;
+  cursor: pointer;
+}
+
+.user-or-artist-successfully-deleted-message {
+
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  color: darkgreen;
+  font-family: JosephinSansBold;
+}
+
+.user-or-artist-deletion-failed-message {
+
+  background-color: #f8d7da;
+  color: darkred;
+  font-family: JosephinSansBold;
+  border-color: #f5c6cb;
+}
+
+.delete-button:hover {
+
+  box-shadow: 0px 0px 5px 0px darkgreen;
+}

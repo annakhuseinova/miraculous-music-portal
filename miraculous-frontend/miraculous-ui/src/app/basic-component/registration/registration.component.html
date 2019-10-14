@@ -1,0 +1,50 @@
+<div class="registration-form-block">
+  <div class="registration-form-headphones-pic"></div>
+  <div class="registration-form-contents">
+    <h5 class="registration-signature">Register / Sign Up</h5>
+    <figure class="registration-failed-message" *ngIf="!isValidationFailed">{{registrationMessage}}</figure>
+    <form class="registration-form" name="registration-form">
+      <p class="validation-login-error-text validation-error-text" *ngIf="isValidationFailed">
+        {{registrationValidationError?.login}}
+      </p>
+      <input type="text" name="registration-name-input" placeholder="Enter Your Username" class="registration-name-input" [(ngModel)]="visitor.login"
+             required #username="ngModel" minlength="5" >
+      <p class="validation-email-error-text validation-error-text" *ngIf="isValidationFailed" style="color: white">
+        {{registrationValidationError?.email}}
+      </p>
+      <input type="email" name="registration-email-input" placeholder="Enter Your Email" class="registration-email-input" [(ngModel)]="visitor.email"
+             required>
+      <p class="validation-password-error-text validation-error-text" *ngIf="isValidationFailed">
+        {{registrationValidationError?.password}}</p>
+      <input type="password" name="registration-password-input" placeholder="Enter Your Password" class="registration-password-input"
+             [(ngModel)]="visitor.password" required #password="ngModel">
+      <p class="validation-confirmation-password-error-text validation-error-text" *ngIf="isValidationFailed">
+        {{registrationValidationError.confirmationPassword}}</p>
+      <input type="password" name="registration-confirm-password-input" placeholder="Confirm Your Password" class="registration-confirm-password-input"
+             [(ngModel)]="visitor.confirmationPassword" required #confirmPassword="ngModel" minlength="6">
+      <p class="validation-role-error-text validation-error-text">{{registrationValidationError.role}}</p>
+      <p class="register-as-signature">Register as: </p>
+      <label for="user-role" class="user-role-input-label">
+        <input type="radio" name="role" [(ngModel)]="visitor.role" value="user" id="user-role" class="user-role-input" checked (click)="hideAdditionalDataPanel()">
+        User
+      </label>
+      <label class="artist-role-input-label" for="artist-role">
+        <input type="radio" name="role" [(ngModel)]="visitor.role" value="artist" id="artist-role" class="artist-role-input" (click)="showAdditionalDataPanel()">
+        Artist
+      </label>
+      <div class="additional-artist-information"  [hidden]="!isArtistRoleChosen">
+        <p class="validation-description-error-text validation-error-text">{{registrationValidationError?.description}}</p>
+        <textarea name="additional-artist-info"  placeholder="Add some information about yourself" class="artist-description-textarea" [(ngModel)]="visitor.description" required #additionalArtistInfo="ngModel"
+        minlength="5"></textarea>
+        <p class="validation-location-error-text validation-error-text">{{registrationValidationError?.location}}</p>
+        <input name="artist-location" type="text" placeholder="Enter your location" class="artist-location-input" [(ngModel)]="visitor.location"
+               required #artistLocation="ngModel"  >
+      </div>
+      <button type="submit"  name="registration-submit-button" class="registration-submit-button" (click)="submitRegistrationForm()">Register Now</button>
+      <input type="reset" class="registration-form-reset-button" hidden="true">
+    </form>
+    <p class="login-link">Already Have An Account?<button (click)="switchToLoginComponent()">Login Here</button></p>
+  </div>
+  <a class="close-button" (click)="closeRegistrationComponent()"><img src="assets/icons/close-button.png"></a>
+  <preloader-block *ngIf="isActivationMailBeingSent"></preloader-block>
+</div>

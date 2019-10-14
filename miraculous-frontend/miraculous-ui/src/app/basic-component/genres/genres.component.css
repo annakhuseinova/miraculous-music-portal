@@ -1,0 +1,10 @@
+.genres-container {
+
+  display: flex;
+  margin-left: 5%;
+  margin-top: 4%;
+  width: 950px;
+  min-height: 500px;
+  flex-wrap: wrap;
+  padding-left: 10px;
+}

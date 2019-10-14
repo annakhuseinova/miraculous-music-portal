@@ -1,0 +1,580 @@
+.added-tracks-block {
+
+  width: 885px;
+  height: 695px;
+  border-radius: 7px;
+  margin-top: 30px;
+  overflow-y: scroll;
+  border: 1px solid #3bc8e7;
+  padding-left: 20px;
+  padding-top: 35px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.list-of-loaded-tracks {
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #3bc8e7;
+  font-family: JosephinSansRegular;
+  margin-top: 30px;
+  padding-left: 10px;
+}
+
+.add-new-track-button {
+
+  position: absolute;
+  bottom: 0;
+  right: -27%;
+  border: 1px solid white;
+  background-color: transparent;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  height: 40px;
+  width: 120px;
+}
+
+.add-new-track-button:hover {
+
+  box-shadow: 0px 0px 20px 0px white;
+}
+
+.listItem {
+
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 0;
+  margin-bottom: 10px;
+}
+
+.added-tracks-block::-webkit-scrollbar {
+  width: 6px;
+  background-color: #F5F5F5;
+}
+
+.added-tracks-block::-webkit-scrollbar-thumb {
+  background-color: #3bc8e7;
+}
+
+.added-tracks-block::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #1b2039;
+}
+
+.album-cover {
+
+  width: 300px;
+  height: 250px;
+  background-color: lightgrey;
+  border-radius: 7px;
+  margin-bottom: 30px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.select-album-genres, .select-languages {
+
+  border-radius: 7px;
+  outline: none;
+  padding-left: 10px;
+  color: #3bc8e7;
+  background-color: #1b2039;
+
+}
+
+.select-languages {
+
+  margin-top: 20px;
+}
+
+.select-languages-label {
+
+  margin-top: 15px;
+}
+
+.select-album-genres-label {
+
+  margin-top: 25px;
+  margin-bottom: 10px;
+
+}
+
+.selected-genres, .selected-languages {
+
+  width: 300px;
+  height: 90px;
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+}
+
+.album-title-input {
+
+  margin-left: 50px;
+  width: 400px;
+  height: 40px;
+  border-radius: 7px;
+  outline: none;
+  padding-left: 15px;
+}
+
+.album-title-input-label {
+
+  margin-bottom: 10px;
+}
+
+.album-description-input {
+
+  margin-left: 50px;
+  border-radius: 7px;
+  outline: none;
+  padding-left: 15px;
+  margin-top: 15px;
+  padding-top: 10px;
+}
+.album-description-input-label {
+
+  margin-top: 10px;
+}
+.album-cover-picture-label {
+
+  width: 210px;
+  height: 40px;
+  border-radius: 20px;
+  outline: none;
+  text-align: center;
+  font-family: "JosephinSansBold";
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  margin-right: 30px;
+  margin-left: 46px;
+  border: 1px solid #3bc8e7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.select-access-policy {
+
+  margin-left: 50px;
+  margin-top: 30px;
+  width: 415px;
+  height: 40px;
+  border-radius: 7px;
+  padding-left: 10px;
+  outline: none;
+  color: #3bc8e7;
+  background-color: #1b2039;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.album-cover-picture {
+
+  display: none;
+}
+
+.album-price-input {
+
+  width: 400px;
+  margin-left: 50px;
+  height: 30px;
+  margin-top: 15px;
+  padding-left: 10px;
+  border-radius: 7px;
+  outline: none;
+  color: #3bc8e7;
+  background-color: #1b2039;
+}
+
+.album-price-input::-webkit-outer-spin-button,
+.album-price-input::-webkit-inner-spin-button {
+
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.release-date-label {
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.release-date-input {
+
+  width: 407px;
+  margin-left: 50px;
+  border-radius: 7px;
+  color: #3bc8e7;
+  background-color: #1b2039;
+  outline: none;
+  padding-left: 10px;
+  height: 35px;
+}
+
+.release-date-input::-webkit-outer-spin-button,
+.release-date-input::-webkit-inner-spin-button {
+
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.track-information-form-block {
+
+  width: 1030px;
+  height: 1625px;
+  border-radius: 15px;
+  background-color: #1b2039;
+  text-align: center;
+  padding-top: 50px;
+  position: relative;
+  margin-top: 30px;
+  margin-left: 15%;
+  margin-bottom: 40px;
+
+}
+
+.album-size-signature,.album-duration-signature, .number-of-tracks-signature{
+
+  color: #3bc8e7;
+  font-family: JosephinSansRegular;
+  margin: 10px 0 0 0;
+  display: flex;
+}
+.track-information-signature {
+
+  color: #3bc8e7;
+  font-family: "JosephinSansSemiBold";
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 50px;
+  margin-top: 30px;
+}
+
+.track-information-signature:after {
+
+  content: " ";
+  position: absolute;
+  background-image: url(../../../assets/images/divider.png);
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  margin-top: 50px;
+  margin-left: -160px;
+}
+
+.track-information-form {
+
+  margin-top: 30px;
+  width: 930px;
+  margin-left: 80px;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.track-information-form-item {
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 30px;
+}
+
+.track-information-form label {
+
+  color: #3bc8e7;
+  font-family: "JosephinSansSemiBold";
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.track-information-form-item  select {
+
+  width: 433px;
+  height: 49px;
+}
+
+.track-information-form-input {
+
+  width: 410px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  font-family: "JosephinSansBold";
+  font-size: 15px;
+  font-weight: 400;
+  margin-right: 30px;
+  outline: none;
+  padding-left: 18px;
+  color: #777777;
+  margin-top: 14px;
+  margin-bottom: 30px;
+
+}
+
+.track-information-form-button {
+
+  width: 210px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #3bc8e7;
+  outline: none;
+  border: none;
+  text-align: center;
+  color: #ffffff;
+  font-family: "JosephinSansBold";
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  margin-right: 30px;
+}
+.track-information-form-button:hover {
+
+  box-shadow: 0px 0px 20px 0px #3bc8e7;
+}
+.track-name-input-label, .artist-name-input-label  {
+
+  color: #3bc8e7;
+  font-family: "JosephinSansSemiBold";
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.add-new-track-to-album-button {
+
+  width: 130px;
+  height: 40px;
+  border-radius: 20px;
+  outline: none;
+  text-align: center;
+  font-family: "JosephinSansBold";
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  margin-right: 30px;
+  margin-left: 46px;
+  border: 1px solid #3bc8e7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  background-color: #1b2039;
+  color: #3bc8e7;
+}
+.add-new-track-to-album-button:hover, .album-cover-picture-label:hover {
+
+  box-shadow: 0px 0px 20px 0px #3bc8e7;
+}
+
+.form-buttons {
+
+  margin-top: 30px;
+  margin-left: 22%;
+}
+
+
+.genre-tag, .language-tag, app-tag {
+
+  min-width: 50px;
+  height: 30px;
+  background-color: #1b2039;
+  border-radius: 6px;
+  border: 1px solid #3bc8e7;
+  justify-content: center;
+  align-items: center;
+  font-family: "JosephinSansBold";
+  color: #3bc8e7;
+  display: none;
+  margin: 10px 10px 0 0;
+  padding-right: 14px;
+  padding-left: 3px;
+  position: relative;
+}
+
+.selected-genres::-webkit-scrollbar {
+
+  width: 6px;
+  background-color: #F5F5F5;
+}
+
+.selected-genres::-webkit-scrollbar-thumb {
+
+  background-color: #3bc8e7;
+}
+
+.selected-genres::-webkit-scrollbar-track {
+
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #1b2039;
+}
+
+.selected-languages::-webkit-scrollbar {
+
+  width: 6px;
+  background-color: #F5F5F5;
+}
+
+.selected-languages::-webkit-scrollbar-thumb {
+  background-color: #3bc8e7;
+}
+
+.selected-languages::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #1b2039;
+}
+
+.genre-tag-remove-tag-button, .language-tag-remove-tag-button {
+
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  color: white;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  align-items: center;
+  font-size: 11px;
+  width: 10px;
+  height: 10px;
+  background-image: url(../../../assets/images/cancel.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+
+}
+
+.added-track {
+
+  width: 400px;
+  height: 50px;
+  margin: 15px 15px 0 0;
+  border-radius: 7px;
+  display: flex;
+  border: 1px solid #3bc8e7;
+  position: relative;
+}
+
+.added-track:after {
+
+  content: "$";
+  color: #3bc8e7;
+  position: absolute;
+  right: 5px;
+  top: 2px;
+  font-size: 17px;
+}
+
+
+.added-track-cover {
+
+  width: 62px;
+  margin: 5px 0 0 10px;
+  height: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 1px solid grey;
+  border-radius: 6px;
+}
+
+.added-track-file-input-label {
+
+  cursor: pointer;
+  width: 100px;
+  height: 48px;
+  border: 1px solid #3bc8e7;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  font-size: 10px;
+  justify-content: center;
+
+}
+
+.added-track-file-input {
+
+  position: absolute;
+  overflow: hidden;
+  z-index: -1;
+  margin-top: 0.01px;
+  width: 0.01px;
+  outline: none;
+  opacity: 0;
+}
+
+.track-name {
+
+  margin: 12px 0 0 10px;
+  outline: none;
+  font-family: "JosephinSansBold";
+  font-size: 15px;
+  font-weight: 900;
+  cursor: pointer;
+  color: #3bc8e7;
+  width: 175px;
+}
+
+.multiple-input-label {
+
+  width: 210px;
+  height: 40px;
+  border-radius: 20px;
+  outline: none;
+  text-align: center;
+  font-family: "JosephinSansBold";
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  margin-right: 30px;
+  margin-left: 10px;
+  border: 1px solid #3bc8e7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.multiple-input-label:hover {
+
+  box-shadow: 0px 0px 20px 0px #3bc8e7;
+}
+
+.full-album-track-version-text {
+
+  color: white;
+  position: absolute;
+  bottom: -31px;
+  left: 88px;
+  font-family: JosephinSansRegular;
+}
+
+.preview-album-track-version-text {
+
+  color: white;
+  font-family: JosephinSansRegular;
+  position: absolute;
+  bottom: -32px;
+  left: 329px;
+  width: 199px;
+}
+
+.remove-album-picture-button {
+
+  position: absolute;
+  top: -13%;
+  right: -1%;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+}

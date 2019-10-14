@@ -1,0 +1,57 @@
+<script src="track-page.component.ts"></script>
+<div class="track-page-container">
+  <div class="track-info">
+    <p class="free-track-text" *ngIf="fullTrackInfoDto.isFree">Free Track</p>
+    <p class="track-price" *ngIf="!fullTrackInfoDto.isFree">{{fullTrackInfoDto.price}} $</p>
+    <i class="fa fa-check" *ngIf="fullTrackInfoDto.inCartOfCurrentVisitor"></i>
+    <button *ngIf="!fullTrackInfoDto.isFree" class="add-to-cart-button" (click)="addTrackToCart()">Add To Cart</button>
+    <div [ngStyle]="{'background-image': 'url(' + imagesPath  + fullTrackInfoDto.coverPictureUrlName+')'}" class="track-cover"></div>
+      <div class="track-info-contents">
+        <h6 class="track-title">{{fullTrackInfoDto.title}}</h6>
+        <p class="track-author">By - <a class="track-author" [href]="artistPageUrl + fullTrackInfoDto.artistId">{{fullTrackInfoDto.artistLogin}}</a></p>
+        <p class="track-album">Album: None</p>
+        <p class="track-release-date">Release Date: {{fullTrackInfoDto.dateOfRelease}}</p>
+        <p class="track-length">Track Length: {{fullTrackInfoDto.duration}}</p>
+        <p class="track-genres">Genres: {{fullTrackInfoDto.genres}}</p>
+        <p class="track-description">{{fullTrackInfoDto.description}}</p>
+        <div class="audiotrack">
+          <button class="play-album-track-button" (click)="playTrack()" ><i class="fa fa-play"></i>
+            <i #pauseIcon class="fa fa-pause"></i></button>
+          <figure class="track-progress-bar" (click)="playTrackAtChosenMoment($event)" #trackProgressBar>
+            <figure class="progress-fill"></figure>
+            <figure class="track-handle"></figure>
+          </figure>
+          <button class="download-track-button">
+            <a type="button" download [href]="trackAudioUrl + fullTrackInfoDto.audioUrl">Download</a>
+          </button>
+          <button class="add-to-queue-button">Add To Queue</button>
+          <audio (timeupdate)="updateProgressBar()" (ended)="stopTrack()" #audio [src]="trackAudioUrl + fullTrackInfoDto.audioUrl" ></audio>
+        </div>
+        <i class="fa fa-heart" (click)="putLike()" [ngClass]="{'track-liked-by-current-visitor':fullTrackInfoDto.likedByCurrentVisitor}"></i>
+        <p class="number-of-track-likes">{{fullTrackInfoDto.numberOfLikes}}</p>
+        <p class="paragraph"></p>
+      </div>
+</div>
+  <similar-tracks class="similar-tracks-block"></similar-tracks>
+  <section class="album-page-comments-section">
+    <div class="album-page-comments-part">
+      <h5 class="album-page-comments-signature">Comments</h5>
+      <p *ngIf="trackComments.length == 0" class="no-track-comments-yet">There are no comments yet.. </p>
+      <div class="track-comments">
+        <track-comment (onCommentDeletion)="getTrackComments()" *ngFor="let comment of trackComments" [comment]="comment"></track-comment>
+      </div>
+    </div>
+    <div class="album-page-comments-form-block">
+      <h5 class="album-page-comments-signature">Leave your comment here...</h5>
+      <div class="album-page-comments-form">
+        <textarea [(ngModel)]="commentToBePosted.text" #trackCommentTextArea class="album-page-comments-form-text-input" placeholder="Enter Your Comment Here..." maxlength="200"></textarea>
+        <button (click)="postComment()" class="album-page-comments-form-submit-button" value="Post Your Comment" [disabled]="trackCommentTextArea.textLength == 0">Post Your Comment</button>
+      </div>
+    </div>
+    <div class="sign-in-suggestion">
+      <p>In order to post comments you need to sign in</p>
+      <button (click)="showSignInPanel()">Sign in</button>
+    </div>
+  </section>
+</div>
+

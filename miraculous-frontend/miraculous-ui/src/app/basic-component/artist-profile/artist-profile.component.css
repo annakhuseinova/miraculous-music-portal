@@ -1,0 +1,391 @@
+.artist-profile-block {
+
+  width: 1250px;
+  min-height: 450px;
+  padding-top: 50px;
+  border-radius: 15px;
+  background-color: #1b2039;
+  display: flex;
+  margin-left: 4%;
+  margin-top: 3%;
+  flex-wrap: wrap;
+  margin-bottom: 100px;
+  position: relative;
+}
+
+.no-albums-text, .no-tracks-text {
+
+
+  margin-left: 50px;
+  color: white;
+  font-size: 18px;
+  font-family: JosephinSansRegular;
+}
+
+.no-comments-yet-text {
+
+  color: white;
+  text-align: center;
+  font-family: JosephinSansRegular;
+}
+
+.artist-profile-picture {
+
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  background-color: lightgrey;
+  margin-left: 100px;
+  background-position: center;
+  background-size: cover;
+}
+
+.fa-heart {
+
+  position: absolute;
+  position: absolute;
+  top: 240px;
+  left: -180px;
+  font-size: 25px;
+  color: #3bc8e7;
+}
+
+.number-of-likes {
+
+  position: absolute;
+  top: 222px;
+  left: -140px;
+  font-size: 19px;
+  color: #3bc8e7;
+  font-family: JosephinSansRegular;
+}
+
+.sign-in-suggestion {
+
+  display: block;
+  text-align: center;
+  font-family: JosephinSansRegular;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.sign-in-suggestion p {
+
+  color: white;
+}
+
+.sign-in-suggestion button {
+
+  background-color: #3bc8e7;
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 135px;
+  height: 34px;
+}
+
+.sign-in-suggestion button:hover {
+
+  color: #ffffff;
+  box-shadow: 0px 0px 20px 0px #3bc8e7;
+}
+
+.artist-profile-info {
+
+  margin-left: 10px;
+  min-height: 400px;
+  width: 600px;
+  position: relative;
+}
+
+.artist-profile-info-login {
+
+  font-family: "JosephinSansBold";
+  color: #3bc8e7;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 50px;
+  margin: 0 0 0 35%;
+
+}
+
+.artist-profile-info-login:after {
+
+  content: " ";
+  position: absolute;
+  background-image: url(~src/assets/images/divider.png);
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  margin-top: 50px;
+  margin-left: -88px;
+}
+
+.artist-profile-info-registration-date, .artist-profile-info-liked-tracks,
+.artist-profile-info-liked-albums,.artist-profile-info-description,
+.artist-profile-info-favourite-genres,.artist-profile-info-location {
+
+  font-family: "JosephinSansRegular";
+  font-size: 16px;
+  color: #3bc8e7;
+  margin: 6px;
+}
+
+.artist-profile-info-registration-date {
+
+  margin-top: 30px;
+}
+.artist-profile-info-description {
+
+  margin-top: 30px;
+  height: 170px;
+  overflow-y: scroll;
+}
+
+.artist-profile-info-description::-webkit-scrollbar {
+  width: 6px;
+  background-color: #F5F5F5;
+}
+
+.artist-profile-info-description::-webkit-scrollbar-thumb {
+  background-color: #252b4d;
+}
+
+.artist-profile-info-description::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #1b2039;
+}
+
+.upcoming-events-section {
+
+  width: 250px;
+  min-height: 200px;
+  margin-left: 50px;
+}
+
+.section-heading {
+
+  color: #3bc8e7;
+  font-family: JosephinSansBold;
+  text-align: center;
+  font-size: 18px;
+  position: relative;
+}
+
+.upcoming-events-section .section-heading:after {
+
+  content: " ";
+  position: absolute;
+  background-image: url(~src/assets/images/blue-divider.png);
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 2px;
+  bottom: -11px;
+  left: 52px;
+}
+
+.artist-music-section .section-heading:after {
+
+  content: " ";
+  position: absolute;
+  background-image: url(~src/assets/images/blue-divider.png);
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 2px;
+  bottom: -11px;
+  left: 197px;
+}
+
+.comments-section .section-heading:after {
+
+  content: " ";
+  position: absolute;
+  background-image: url(~src/assets/images/blue-divider.png);
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 2px;
+  bottom: -11px;
+  left: 121px;
+}
+
+.artist-music-section {
+
+  width: 505px;
+  min-height: 200px;
+}
+
+.comments-section {
+
+  width: 350px;
+  min-height: 100%;
+  margin-left: 55px;
+}
+
+.comments-disabled-text {
+
+  color: white;
+  font-family: JosephinSansRegular;
+  margin-left: 140px;
+  font-size: 19px;
+}
+
+.comments-block {
+
+  overflow-y: scroll;
+  height: 57%;
+}
+
+.no-events-yet-text {
+
+  color: white;
+  font-family: JosephinSansRegular;
+  text-align: center;
+}
+
+.comments-block::-webkit-scrollbar {
+  width: 6px;
+  background-color: #F5F5F5;
+}
+
+.comments-block::-webkit-scrollbar-thumb {
+  background-color: #252b4d;
+}
+
+.comments-block::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #1b2039;
+}
+
+.music-section-heading {
+
+  color: #3bc8e7;
+  font-family: JosephinSansBold;
+  font-size: 18px;
+  margin-left: 47px;
+
+}
+
+.artist-albums-section,.artist-tracks-block,.artist-free-music {
+
+  height: 560px;
+  width: 560px;
+  overflow-y: scroll;
+  margin-bottom: 20px;
+}
+
+.artist-albums-section {
+
+  height: 208px;
+}
+
+.artist-tracks-block::-webkit-scrollbar {
+  width: 6px;
+  background-color: #F5F5F5;
+}
+
+.artist-tracks-block::-webkit-scrollbar-thumb {
+  background-color: #252b4d;
+}
+
+.artist-tracks-block::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #1b2039;
+}
+
+.artist-albums-section::-webkit-scrollbar {
+  width: 6px;
+  background-color: #F5F5F5;
+}
+
+.artist-albums-section::-webkit-scrollbar-thumb {
+  background-color: #252b4d;
+}
+
+.artist-albums-section::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #1b2039;
+}
+
+.artist-free-music::-webkit-scrollbar {
+  width: 6px;
+  background-color: #F5F5F5;
+}
+
+.artist-free-music::-webkit-scrollbar-thumb {
+  background-color: #252b4d;
+}
+
+.artist-free-music::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #1b2039;
+}
+
+.comment-form {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.leave-comment-heading {
+
+  color: #3bc8e7;
+  font-family: "JosephinSansSemiBold";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 50px;
+  position: relative;
+  margin: 20px 0 20px 20px;
+  text-align: center;
+  align-self: flex-start;
+}
+
+.comment-textarea {
+
+  width: 300px;
+  border-radius: 5px;
+  outline: none;
+  height: 125px;
+  padding-left: 10px;
+  padding-top: 15px;
+  font-family: "JosephinSansRegular";
+}
+
+.submit-comment-button {
+
+  width: 130px;
+  height: 30px;
+  border-radius: 20px;
+  background-color: #3bc8e7;
+  outline: none;
+  border: none;
+  color: #ffffff;
+  font-family: "JosephinSansRegular";
+  font-size: 15px;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.submit-comment-button:hover {
+
+  box-shadow: 0px 0px 20px 0px #3bc8e7;
+}
+
+.leave-comment-heading:after{
+
+  content: " ";
+  position: absolute;
+  background-image: url(~src/assets/images/blue-divider.png);
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 2px;
+  bottom: 0;
+  left: -15px;
+}

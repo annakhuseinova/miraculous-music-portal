@@ -1,0 +1,17 @@
+<div class="progress-panel-block" #uploadProgressPanel>
+  <div *ngIf="!hasValidationFailed">
+    <p class="upload-progress-text">
+      <span *ngIf="percentOfUpload < 100">Album is being uploaded</span>
+      <span *ngIf="percentOfUpload == 100">Album has been successfully uploaded!</span>
+    </p>
+    <p class="upload-progress-percent">{{percentOfUpload}} %</p>
+    <figure class="progress-bar">
+      <figure class="factual-upload-progress-bar" [ngStyle]="{width: percentOfUpload + '%'}"></figure>
+    </figure>
+  </div>
+  <div *ngIf="hasValidationFailed">
+    <p *ngFor="let validationErrorMessage of validationMessages" class="validation-error-message">{{validationErrorMessage}}</p>
+  </div>
+  <button class="ok-button" *ngIf="percentOfUpload == 100" (click)="goToArtistProfilePage()">Ok</button>
+  <button class="cancel-upload-button" *ngIf="percentOfUpload < 100" (click)="cancelTrackUpload()">Cancel</button>
+</div>

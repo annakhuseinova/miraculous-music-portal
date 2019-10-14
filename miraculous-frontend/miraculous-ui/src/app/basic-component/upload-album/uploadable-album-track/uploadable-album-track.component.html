@@ -1,0 +1,10 @@
+<div class="uploadable-album-track-component" >
+  <label for="title" class="title-label">Title</label>
+  <input [(ngModel)]="albumTrackUploadDto.title" type="text" name="title" id="title" placeholder="Enter track title" class="title">
+  <label for="price" class="price-label">Price</label>
+  <input [(ngModel)]="albumTrackUploadDto.price" type="number" class="price" id="price" name="price" placeholder="Price">
+  <input #trackFullVersion (change)="selectAlbumTrackFullVersion()"  type="file" name="full-track-version-file" accept="audio/mp3">
+  <input #trackPreviewVersion (change)="selectAlbumTrackPreviewVersion()" type="file" name="preview-track-version-file" *ngIf="!isInFreeAccess" accept="audio/mp3">
+  <i class="fa fa-times" (click)="deleteTrack()"></i>
+  <audio #fullAlbumTrackAudio></audio>
+</div>

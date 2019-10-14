@@ -1,0 +1,34 @@
+.file-upload-progress-panel-block {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  height: 200px;
+  background-color: #3bc8e7;
+  border-radius: 10px;
+  padding-top: 10px;
+  position: relative;
+  font-family: JosephinSansRegular;
+}
+
+.cancel-upload-button {
+
+  cursor: pointer;
+  margin-right: 20px;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid white;
+  background-color: #3bc8e7;
+  font-family: "JosephinSansRegular";
+  color: white;
+  margin-top: 20px;
+  height: 40px;
+}
+
+.upload-progress-text {
+
+  margin-top: 20px;
+  color: white;
+}
+

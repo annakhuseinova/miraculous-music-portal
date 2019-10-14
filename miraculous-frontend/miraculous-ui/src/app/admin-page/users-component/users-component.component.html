@@ -1,0 +1,23 @@
+<section class="users-block">
+  <p class="users-signature">Users</p>
+  <figure class="ban-user-section">
+    <label for="ban-user-login-input" class="ban-user-label">Find user or artist to ban by login</label>
+    <input type="text" placeholder="Enter login" [(ngModel)]="siteVisitor.login" id="ban-user-login-input" class="ban-user-login-input">
+    <button class="find-user-to-ban-button" (click)="getSiteVisitorByLogin()">Find</button>
+  </figure>
+  <figure class="user-or-artist-found-to-be-banned-section" *ngIf="hasSiteVisitorBeenFound">
+    <p style="margin-left: 20px"><span class="found-signature">Found: {{siteVisitorLogin}}</span></p>
+    <p>Date of registration: {{siteVisitor.dateOfRegistration}}</p>
+    <button class="delete-button" (click)="deleteSiteVisitorById(siteVisitor.id)">Delete this user/artist</button>
+    <i class="fa fa-times" (click)="closeSiteVisitorFoundMessage()"></i>
+  </figure>
+  <figure class="user-or-artist-not-found" *ngIf="hasSiteVisitorNotBeenFound">
+    <p class="login-not-found-signature">{{siteVisitorNotFoundMessage}}</p>
+    <i class="fa fa-times" (click)="closeSiteVisitorNotFoundMessage()"></i>
+  </figure>
+  <figure class="user-or-artist-successfully-deleted-message" *ngIf="hasBanBeenSuccessful">{{siteVisitorDeletionSuccessMessage}}
+    <i class="fa fa-times" (click)="closeSiteVisitorSuccessfullyDeletedMessage()"></i></figure>
+  <figure class="user-or-artist-deletion-failed-message" *ngIf="hasBanFailed">{{siteVisitorDeletionFailureMessage}}
+    <i class="fa fa-times" (click)="closeSiteVisitorFailedDeletionMessage()"></i></figure>
+</section>
+

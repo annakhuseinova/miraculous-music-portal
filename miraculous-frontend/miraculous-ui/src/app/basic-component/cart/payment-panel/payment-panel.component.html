@@ -1,0 +1,14 @@
+<div #panel class="payment-panel-block">
+  <p class="miraculous-checkout-text">Miraculous Checkout</p>
+  <label for="card-number">Credit Card Number</label>
+  <input type="number" name="credit-card-number" #creditCartNumberInput id="card-number" class="credit-card-number">
+  <p>Credit Card Expiration Month and Year</p>
+  <div style="display: flex;">
+    <input type="number" name="expiration-month" class="expiration-month-input" #expirationMonthInput>
+    <input type="number" name="expiration-year" class="expiration-year-input" #expirationYearInput>
+  </div>
+  <label for="card-cvc" class="cvc-label">CVC</label>
+  <input type="number" name="cvc" id="card-cvc" class="cvc" #cvcInput>
+  <button (click)="chargeCreditCard()" class="pay-button">Pay {{totalSum}}$</button>
+  <i class="fa fa-times" (click)="closePaymentPanel()"></i>
+</div>

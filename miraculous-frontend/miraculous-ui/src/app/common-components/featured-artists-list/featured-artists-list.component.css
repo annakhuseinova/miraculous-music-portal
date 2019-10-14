@@ -1,0 +1,50 @@
+.featured-artists-list {
+
+  height: 1535px;
+  overflow-y: scroll;
+}
+
+.featured-artists-list::-webkit-scrollbar, .featured-albums-list::-webkit-scrollbar {
+  width: 6px;
+  background-color: #F5F5F5;
+}
+
+.featured-artists-list::-webkit-scrollbar-thumb,.featured-albums-list::-webkit-scrollbar-thumb {
+  background-color: #252b4d;
+}
+
+.featured-artists-list::-webkit-scrollbar-track,.featured-albums-list::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #1b2039;
+}
+
+.featured-albums-list {
+
+  height: 1615px;
+  margin-top: 70px;
+  overflow-y: scroll;
+}
+
+.featured-artists-heading {
+
+  margin: 0 0 10px 48px;
+  color: #3bc8e7;
+  font-family: "JosephinSansSemiBold";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 50px;
+  position: relative;
+}
+
+
+.featured-artists-heading:after {
+
+  content: " ";
+  position: absolute;
+  background-image: url(~src/assets/images/blue-divider.png);
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 2px;
+  bottom: 0;
+  left: -15px;
+}

@@ -1,0 +1,14 @@
+<figure class="album-block">
+  <figure class="album-cover" [ngStyle]="{'background-image': 'url(' + imagesPath  + album.albumCoverPictureUrlName+')'}"></figure>
+  <figure class="album-title-and-release-date-block">
+    <a class="album-title" [href]="albumPageUrl + album.id">{{album.title}}</a>
+    <p class="album-release-date">Released: {{album.dateOfRelease}}</p>
+  </figure>
+  <i class="fa fa-heart" (click)="putLike()" [ngClass]="{'album-is-liked-by-current-visitor': album.likedByCurrentVisitor}"></i>
+  <p class="number-of-likes">{{album.numberOfLikes}}</p>
+  <p class="album-number-of-tracks">Tracks: {{album.numberOfTracks}}</p>
+  <i class="fa fa-shopping-cart" title="Add To Cart" (click)="addToCart()" *ngIf="!album.isFree" [ngClass]="{'album-is-in-cart-of-current-visitor': album.inCartOfCurrentVisitor}"></i>
+  <p class="is-free-text" *ngIf="album.isFree == true">Free</p>
+</figure>
+
+

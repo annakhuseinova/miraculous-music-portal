@@ -1,0 +1,10 @@
+<form class="search-panel-search-form">
+  <input #searchInput type="text" name="search" class="search-panel-search-form-input" #searchInput placeholder="Search track, album, artist...">
+  <button (click)="getSearchResults()" class="search-panel-search-form-submit-button"><img src="assets/icons/loupe-icon.png"></button>
+</form>
+<p class="found-results-text" *ngIf="numberOfResults != 0">Found Results: {{numberOfResults}}</p>
+<found-artist *ngFor="let artist of foundArtists" [foundArtist]="artist"></found-artist>
+<found-album *ngFor="let album of foundAlbums" [foundAlbum]="album"></found-album>
+<found-track class="found-track" *ngFor="let track of foundTracks" [foundTrack]="track"></found-track>
+<p *ngIf="keyword != null && keyword.length != 0" class="search-unsuccessful-text">Sorry, but nothing matched your search terms ({{keyword}}). Please try again with some different keywords. </p>
+

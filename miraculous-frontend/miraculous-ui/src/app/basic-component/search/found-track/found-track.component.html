@@ -1,0 +1,12 @@
+<div class="found-track-block">
+  <figure class="found-track-cover" [ngStyle]="{'background-image': 'url(' + imagesPath  + foundTrack.coverPictureUrlName+')'}"></figure>
+  <div class="found-track-info">
+    <a class="found-track-info-item title" [href]="trackPageUrl + foundTrack.id">{{foundTrack.title}}</a>
+    <a class="found-track-info-item artist" [href]="artistPageUrl + foundTrack.artistId">{{foundTrack.artistLogin}}</a>
+    <p class="found-track-info-item">{{foundTrack.genres}}</p>
+  </div>
+  <p class="track-duration">{{foundTrack.duration}}</p>
+  <p class="heart"><i class="fa fa-heart"></i></p>
+  <p class="number-of-likes">{{foundTrack.numberOfLikes}}</p>
+</div>
+

@@ -1,0 +1,8 @@
+<div class="account-deletion-confirmation-block">
+  <p class="deletion-warning-text">Are you sure you want to delete your account? All of your data will be irrevocably deleted.</p>
+  <div class="account-deletion-confirmation-buttons-block">
+    <button class="account-deletion-confirmation-button" (click)="deleteUser()">Yes, delete my account</button>
+    <button class="account-deletion-confirmation-button" (click)="closeAccountDeletionConfirmation()">No, leave this form</button>
+  </div>
+  <a type="button" class="close-account-deletion-confirmation-block-button" (click)="closeAccountDeletionConfirmation()"></a>
+</div>

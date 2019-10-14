@@ -1,0 +1,34 @@
+<figure class="player-block">
+  <figure class="playing-track-info-block">
+    <p class="playing-track-info-title">{{playerService.playableTracks[playerService.currentTrackIndex]?.title}}</p>
+    <p class="playing-track-info-artist">{{playerService.playableTracks[playerService.currentTrackIndex]?.artistLogin}}</p>
+  </figure>
+  <audio  [src]="trackUrl + playerService.playableTracks[playerService.currentTrackIndex]?.audioUrlName"
+         #audio (ended)="startNextTrack()" (timeupdate)="updateProgressBar()"></audio>
+  <figure class="audioplayer">
+    <a  type="button" class="turn-on-previous-track-button" (click)="changeCurrentTrackToPrevious()">
+    </a>
+    <a type="button" class="play-button" (click)="playCurrentTrack()" *ngIf="!isPlaying"></a>
+    <a type="button" class="pause-button" (click)="pauseTrack()" *ngIf="isPlaying"></a>
+    <a class="turn-on-next-track-button" (click)="changeCurrentTrackToNext()"></a>
+  </figure>
+  <figure class="track-progress-bar" (click)="playTrackAtChosenMoment($event)" #trackProgressBar>
+    <figure class="progress-fill"></figure>
+    <figure class="track-handle"></figure>
+  </figure>
+  <a type="button" class="volume-control">
+    <ul class="volume-list">
+      <li><a type="button" (click)="setVolume(0.1)">10%</a>
+      <li><a type="button" (click)="setVolume(0.3)">30%</a>
+      <li><a type="button" (click)="setVolume(0.5)">50%</a>
+      <li><a type="button" (click)="setVolume(0.7)">70%</a>
+      <li><a type="button" (click)="setVolume(0.9)">90%</a>
+      <li><a type="button" (click)="setVolume(1)">100%</a>
+    </ul>
+  </a>
+  <a type="button" class="shuffle-button" alt="shuffle" style="display: none"></a>
+  <a type="button" class="repeat-button" alt="repeat" [ngClass]="onRepeat? 'repeat-button-hovered':'repeat-button'" (click)="toggleOnRepeat()"></a>
+  <a type="button" class="open-music-queue-button" (click)="showTracksQueue()">Show Queue</a>
+  <app-tracks-queue (onRemovingPlayingTrackFromQueue)="finishPlaying()" (onZeroTracksLeftInQueue)="finishPlaying()" (onPauseTrack)="pauseTrack()" class="tracks-queue" (onClosedTracksQueuePanel)="hideTracksQueue()" #tracksQueue (onPlayTrack)="playTrack($event)"></app-tracks-queue>
+  <a type="button" class="toggle-player-block-button" (click)="togglePlayerBlock()"></a>
+</figure>

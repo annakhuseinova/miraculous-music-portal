@@ -1,0 +1,27 @@
+.preloader-block {
+
+  display: flex;
+  width: 400px;
+  height: 210px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 47%;
+  top: 1%;
+}
+
+.preloader {
+
+  background-position: center;
+  height: 48px;
+  width: 48px;
+  background-image: url(~src/assets/images/registration-preloader.gif);
+}
+
+.preloader-text {
+
+  margin-left: 10px;
+  color: white;
+  font-family: JosephinSansBold;
+  font-size: 16px;
+}

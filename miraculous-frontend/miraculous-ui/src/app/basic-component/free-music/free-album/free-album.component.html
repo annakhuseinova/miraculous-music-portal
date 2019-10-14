@@ -1,0 +1,11 @@
+<div class="free-album-block">
+  <figure class="free-album-cover"  [ngStyle]="{'background-image': 'url(' + imagesPath  + freeAlbum.albumCoverPictureUrlName+')'}"></figure>
+  <div class="free-album-info">
+    <a [href]="albumPageUrl + freeAlbum.id" class="free-album-info-item title">{{freeAlbum.title}}</a>
+    <a [href]="artistPageUrl + freeAlbum.id" class="free-album-info-item artist">{{freeAlbum.artistLogin}}</a>
+    <p class="free-album-info-item">{{freeAlbum.genres}}</p>
+  </div>
+  <p class="number-of-tracks">Tracks: {{freeAlbum.numberOfTracks}}</p>
+  <i class="fa fa-heart" (click)="putLike()" [ngClass]="{'album-is-liked-by-current-visitor ': freeAlbum.likedByCurrentVisitor}"></i>
+  <p class="number-of-likes">{{freeAlbum.numberOfLikes}}</p>
+</div>

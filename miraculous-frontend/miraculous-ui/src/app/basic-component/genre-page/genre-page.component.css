@@ -1,0 +1,81 @@
+.genre-container {
+
+  display: flex;
+  margin-left: 5%;
+  margin-top: 4%;
+  width: 950px;
+  min-height: 250px;
+  flex-wrap: wrap;
+  padding-left: 10px;
+  position: relative;
+}
+
+.genre-picture {
+
+  margin: 0;
+  width: 220px;
+  height: 200px;
+  background-color: lightskyblue;
+  border-radius: 10px;
+  background-size: cover;
+  display: block;
+  background-position: center;
+}
+
+.genre-title {
+
+  margin-left: 260px;
+  color: #3bc8e7;
+  font-size: 30px;
+  font-family: JosephinSansBold;
+  width: 310px;
+}
+
+.genre-description {
+
+  margin-left: 260px;
+  color:  #3bc8e7;
+  font-family: JosephinSansRegular;
+  width: 400px;
+}
+
+.fa-heart {
+
+  position: absolute;
+  right: 350px;
+  color: #3bc8e7;
+  top: 35px;
+  font-size: 22px;
+}
+
+.no-albums-of-genre-text {
+
+  color: white;
+  font-family: JosephinSansRegular;
+  margin-top: 37px;
+  font-size: 20px;
+
+}
+
+.number-of-likes {
+
+  position: absolute;
+  right: 329px;
+  color: #3bc8e7;
+  top: 14px;
+  font-size: 21px;
+  font-family: JosephinSansRegular;
+}
+
+.top-ten-genre-tracks, .top-ten-genre-albums {
+
+  color: white;
+  font-family: JosephinSansRegular;
+}
+
+
+.genre-music-block {
+
+  margin-left: 50px;
+  display: flex;
+}

@@ -1,0 +1,148 @@
+.album-block {
+
+  width: 500px;
+  height: 80px;
+  background-color: #1b2039;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.is-free-text {
+
+  color: white;
+  font-family: JosephinSansRegular;
+  position: absolute;
+  top: -20px;
+  right: 25px;
+}
+
+.album-cover {
+
+  margin-left: 10px;
+  border-radius: 5px;
+  height: 60px;
+  width: 60px;
+  background-color: lightgrey;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+.number-of-likes {
+
+  color: white;
+  margin-right: 25px;
+  font-family: JosephinSansRegular;
+  position: absolute;
+  top: 15px;
+  right: 158px;
+}
+
+.fa-heart {
+
+  color: white;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.fa-heart:hover {
+
+  color: #3bc8e7;
+}
+
+.album-title-and-release-date-block {
+
+  margin: 0;
+  height: 60px;
+}
+
+.album-title, .album-release-date, .album-number-of-tracks {
+
+  font-family: "JosephinSansBold";
+  color: #3bc8e7;
+  font-size: 16px;
+  margin: 0;
+  width: 170px;
+
+}
+
+.album-number-of-tracks {
+
+  margin-left: 35px;
+}
+
+.album-release-date {
+
+  margin-top: 5px;
+}
+
+.album-title {
+
+  margin-top: 5px;
+  text-decoration: none;
+}
+
+.album-release-date {
+
+  font-family: "JosephinSansRegular";
+}
+
+.album-number-of-tracks{
+
+  width: 75px;
+
+}
+
+.fa-shopping-cart {
+
+  font-size: 20px;
+  cursor: pointer;
+  margin-right: 15px;
+  color: white;
+}
+
+.fa-arrow-circle-down {
+
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.fa-shopping-cart:hover, .fa-arrow-circle-down:hover {
+
+  color: #3bc8e7;
+}
+
+.album-title {
+
+  display: block;
+  width: 150px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+  text-decoration: none;
+}
+
+.album-title:hover {
+
+  color: white;
+}
+
+.fa-plus {
+
+  display: block;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+
+.album-is-liked-by-current-visitor, .album-is-in-cart-of-current-visitor {
+
+  color: #3bc8e7;
+}

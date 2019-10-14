@@ -1,0 +1,51 @@
+.genre-item {
+
+  margin: 0 15px 0 0;
+  border-radius: 10px;
+  color: white;
+
+}
+
+.genre-picture {
+
+  margin: 0;
+  width: 220px;
+  height: 200px;
+  background-color: lightskyblue;
+  border-radius: 10px;
+  background-size: cover;
+  display: block;
+  background-position: center;
+}
+
+.genre-info {
+
+  display: flex;
+  position: relative;
+}
+
+.genre-title {
+
+  margin-right: 15px;
+  font-family: JosephinSansRegular;
+  font-size: 16px;
+  text-decoration: none;
+  color: white;
+
+}
+
+.genre-title:hover {
+
+  color: #3bc8e7;
+  cursor: pointer;
+}
+
+.genre-picture, .genre-title {
+
+  cursor: pointer;
+}
+
+.number-of-likes {
+
+  position: absolute;
+}

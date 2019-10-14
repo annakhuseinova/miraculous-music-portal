@@ -1,0 +1,91 @@
+.languages-block {
+
+  height: 450px;
+  width: 500px;
+  background-color: #3bc8e7;
+  border-radius: 12px;
+  position: relative;
+  margin-top: 40px;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.heading {
+
+  color: #fff;
+  font-size: 22px;
+  text-transform: capitalize;
+  text-align: center;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  font-family: "JosephinSansBold";
+
+}
+
+.select-language-signature {
+
+  text-align: center;
+  font-family: "JosephinSansBold";
+  color: #fff;
+  font-size: 19px;
+}
+
+.language-options-block {
+
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 30px;
+  justify-content: center;
+  width: 200px;
+
+}
+
+.radio-button {
+
+  margin-right: 12px;
+}
+
+.radio-button-label {
+
+  font-family: "JosephinSansBold";
+  color: #fff;
+  font-size: 20px;
+
+}
+
+.submit-button {
+
+  width: 135px;
+  background-color: #3bc8e7;
+  border-radius: 6px;
+  height: 30px;
+  cursor: pointer;
+  outline: none;
+  font-family: "JosephinSansBold";
+  color: #fff;
+  font-size: 20px;
+  border: 1px solid #fff;
+  margin-top: 160px;
+}
+
+.submit-button:hover {
+
+  box-shadow: 0px 0px 20px 0px white;
+}
+
+.close-button {
+
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  top: -25px;
+  right: -50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(~src/assets/images/cancel-button.png);
+  z-index: 100;
+}
